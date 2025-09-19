@@ -1,0 +1,10 @@
+{
+  "peerId": "peer3",
+  "ip": "0.0.0.0",
+  "restPort": 3003,
+  "grpcPort": 50053,
+  "sharedDirectory": "./shared-files/peer3",
+  "friendPrimary": "http://localhost:3001",
+  "friendBackup": "http://localhost:3002",
+  "directoryServer": "http://localhost:4000"
+}
