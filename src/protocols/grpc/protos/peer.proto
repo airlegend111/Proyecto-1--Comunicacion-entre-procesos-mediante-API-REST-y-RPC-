@@ -1,0 +1,194 @@
+syntax = "proto3";
+
+package peer;
+
+import "common.proto";
+
+option go_package = "github.com/p2p-system/peer";
+
+// Servicio principal del peer
+service PeerService {
+  // Obtener lista de archivos disponibles
+  rpc GetFiles(GetFilesRequest) returns (GetFilesResponse);
+  
+  // Transferir un archivo
+  rpc TransferFile(TransferFileRequest) returns (stream TransferFileResponse);
+  
+  // Recibir un archivo
+  rpc ReceiveFile(stream ReceiveFileRequest) returns (ReceiveFileResponse);
+  
+  // Verificar disponibilidad de archivo
+  rpc CheckFileAvailability(CheckFileRequest) returns (CheckFileResponse);
+  
+  // Obtener metadatos de archivo
+  rpc GetFileMetadata(GetFileMetadataRequest) returns (GetFileMetadataResponse);
+  
+  // Ping para verificar conectividad
+  rpc Ping(PingRequest) returns (PingResponse);
+  
+  // Obtener estado del peer
+  rpc GetPeerStatus(GetPeerStatusRequest) returns (GetPeerStatusResponse);
+  
+  // Cancelar transferencia
+  rpc CancelTransfer(CancelTransferRequest) returns (CancelTransferResponse);
+}
+
+// Mensajes para obtener archivos
+message GetFilesRequest {
+  string requesting_peer_id = 1;
+  string auth_token = 2;
+  common.SearchFilter filter = 3;
+  bool include_metadata = 4;
+}
+
+message GetFilesResponse {
+  common.Response response = 1;
+  repeated common.File files = 2;
+  common.SystemStatus peer_status = 3;
+}
+
+// Mensajes para transferencia de archivos
+message TransferFileRequest {
+  string filename = 1;
+  string requesting_peer_id = 2;
+  string auth_token = 3;
+  int64 offset = 4; // Para resumir descargas
+  int64 chunk_size = 5;
+}
+
+message TransferFileResponse {
+  oneof data {
+    FileChunk chunk = 1;
+    TransferStatus status = 2;
+    common.Response error = 3;
+  }
+}
+
+message FileChunk {
+  bytes data = 1;
+  int64 offset = 2;
+  int64 total_size = 3;
+  string checksum_chunk = 4;
+  bool is_last = 5;
+}
+
+message TransferStatus {
+  string transfer_id = 1;
+  int64 bytes_transferred = 2;
+  int64 total_bytes = 3;
+  float progress_percent = 4;
+  int64 transfer_rate = 5; // bytes per second
+  string status = 6; // "started", "in_progress", "completed", "error"
+}
+
+// Mensajes para recibir archivos
+message ReceiveFileRequest {
+  oneof data {
+    ReceiveFileMetadata metadata = 1;
+    FileChunk chunk = 2;
+  }
+}
+
+message ReceiveFileMetadata {
+  string filename = 1;
+  int64 file_size = 2;
+  string checksum = 3;
+  string content_type = 4;
+  string sender_peer_id = 5;
+  string auth_token = 6;
+}
+
+message ReceiveFileResponse {
+  common.Response response = 1;
+  string transfer_id = 2;
+  string saved_path = 3;
+}
+
+// Mensajes para verificar disponibilidad
+message CheckFileRequest {
+  string filename = 1;
+  string requesting_peer_id = 2;
+  string checksum = 3; // opcional para verificar integridad
+}
+
+message CheckFileResponse {
+  common.Response response = 1;
+  bool available = 2;
+  common.File file_info = 3;
+  int64 estimated_transfer_time = 4;
+}
+
+// Mensajes para metadatos
+message GetFileMetadataRequest {
+  string filename = 1;
+  string requesting_peer_id = 2;
+  bool include_permissions = 3;
+}
+
+message GetFileMetadataResponse {
+  common.Response response = 1;
+  common.File file = 2;
+  FilePermissions permissions = 3;
+}
+
+message FilePermissions {
+  bool can_download = 1;
+  bool can_preview = 2;
+  repeated string allowed_peers = 3;
+  string access_level = 4; // "public", "restricted", "private"
+}
+
+// Mensajes de ping
+message PingRequest {
+  string requesting_peer_id = 1;
+  int64 timestamp = 2;
+}
+
+message PingResponse {
+  common.Response response = 1;
+  int64 timestamp = 2;
+  int64 latency_ms = 3;
+  common.SystemStatus peer_status = 4;
+}
+
+// Mensajes para estado del peer
+message GetPeerStatusRequest {
+  string requesting_peer_id = 1;
+  bool include_detailed = 2;
+}
+
+message GetPeerStatusResponse {
+  common.Response response = 1;
+  common.SystemStatus status = 2;
+  PeerResources resources = 3;
+  repeated ActiveTransfer active_transfers = 4;
+}
+
+message PeerResources {
+  int64 available_storage = 1;
+  int64 used_storage = 2;
+  float cpu_usage = 3;
+  float memory_usage = 4;
+  int32 active_connections = 5;
+  int64 network_bandwidth = 6;
+}
+
+message ActiveTransfer {
+  string transfer_id = 1;
+  string filename = 2;
+  string peer_id = 3;
+  string direction = 4; // "upload", "download"
+  TransferStatus status = 5;
+}
+
+// Mensajes para cancelar transferencia
+message CancelTransferRequest {
+  string transfer_id = 1;
+  string requesting_peer_id = 2;
+  string reason = 3;
+}
+
+message CancelTransferResponse {
+  common.Response response = 1;
+  bool cancelled = 2;
+}

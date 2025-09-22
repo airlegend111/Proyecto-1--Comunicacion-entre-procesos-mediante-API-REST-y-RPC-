@@ -1,0 +1,54 @@
+// instalar extension "Proto3" en VSCode para resaltar la sintaxis
+
+syntax = "proto3";
+
+package common;
+
+option go_package = "github.com/p2p-system/common";
+
+// Mensaje común para representar un peer
+message Peer {
+  string peer_id = 1;
+  string ip = 2;
+  int32 port = 3;
+  repeated File files = 4;
+  int64 last_seen = 5;
+  string status = 6; // "online", "offline", "busy"
+}
+
+// Mensaje común para representar un archivo
+message File {
+  string filename = 1;
+  int64 size = 2;
+  string checksum = 3;
+  string content_type = 4;
+  int64 last_modified = 5;
+  string path = 6;
+}
+
+// Respuesta estándar para operaciones
+message Response {
+  bool success = 1;
+  string message = 2;
+  int32 error_code = 3;
+  map<string, string> metadata = 4;
+}
+
+// Información de estado del sistema
+message SystemStatus {
+  string service_name = 1;
+  string version = 2;
+  int64 uptime = 3;
+  int32 active_peers = 4;
+  int32 total_files = 5;
+  string status = 6;
+}
+
+// Filtros para búsquedas
+message SearchFilter {
+  string filename_pattern = 1;
+  int64 min_size = 2;
+  int64 max_size = 3;
+  string content_type = 4;
+  repeated string extensions = 5;
+}

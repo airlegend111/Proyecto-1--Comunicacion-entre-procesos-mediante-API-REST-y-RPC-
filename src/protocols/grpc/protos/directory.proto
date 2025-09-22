@@ -1,0 +1,136 @@
+syntax = "proto3";
+
+package directory;
+
+import "common.proto";
+
+option go_package = "github.com/p2p-system/directory";
+
+// Servicio principal del directorio
+service DirectoryService {
+  // Registrar un peer en el directorio
+  rpc RegisterPeer(RegisterPeerRequest) returns (RegisterPeerResponse);
+  
+  // Obtener lista de peers activos
+  rpc GetPeers(GetPeersRequest) returns (GetPeersResponse);
+  
+  // Buscar archivos en la red
+  rpc SearchFiles(SearchFilesRequest) returns (SearchFilesResponse);
+  
+  // Desregistrar un peer
+  rpc UnregisterPeer(UnregisterPeerRequest) returns (UnregisterPeerResponse);
+  
+  // Actualizar información de un peer
+  rpc UpdatePeer(UpdatePeerRequest) returns (UpdatePeerResponse);
+  
+  // Heartbeat para mantener peers activos
+  rpc Heartbeat(HeartbeatRequest) returns (HeartbeatResponse);
+  
+  // Obtener estadísticas del directorio
+  rpc GetStats(GetStatsRequest) returns (GetStatsResponse);
+}
+
+// Mensajes de registro de peer
+message RegisterPeerRequest {
+  common.Peer peer = 1;
+  string auth_token = 2;
+}
+
+message RegisterPeerResponse {
+  common.Response response = 1;
+  string session_token = 2;
+  int64 expires_at = 3;
+}
+
+// Mensajes para obtener peers
+message GetPeersRequest {
+  string session_token = 1;
+  int32 limit = 2;
+  int32 offset = 3;
+  string status_filter = 4; // "online", "all"
+}
+
+message GetPeersResponse {
+  common.Response response = 1;
+  repeated common.Peer peers = 2;
+  int32 total_count = 3;
+}
+
+// Mensajes para búsqueda de archivos
+message SearchFilesRequest {
+  string query = 1;
+  common.SearchFilter filter = 2;
+  string session_token = 3;
+  int32 limit = 4;
+}
+
+message SearchFilesResponse {
+  common.Response response = 1;
+  repeated FileMatch matches = 2;
+  int32 total_matches = 3;
+}
+
+message FileMatch {
+  common.File file = 1;
+  common.Peer owner_peer = 2;
+  float relevance_score = 3;
+}
+
+// Mensajes para desregistro
+message UnregisterPeerRequest {
+  string peer_id = 1;
+  string session_token = 2;
+}
+
+message UnregisterPeerResponse {
+  common.Response response = 1;
+}
+
+// Mensajes para actualización
+message UpdatePeerRequest {
+  common.Peer peer = 1;
+  string session_token = 2;
+  repeated string updated_fields = 3;
+}
+
+message UpdatePeerResponse {
+  common.Response response = 1;
+}
+
+// Mensajes de heartbeat
+message HeartbeatRequest {
+  string peer_id = 1;
+  string session_token = 2;
+  common.SystemStatus status = 3;
+}
+
+message HeartbeatResponse {
+  common.Response response = 1;
+  int64 next_heartbeat_in = 2; // segundos
+}
+
+// Mensajes de estadísticas
+message GetStatsRequest {
+  string session_token = 1;
+}
+
+message GetStatsResponse {
+  common.Response response = 1;
+  DirectoryStats stats = 2;
+}
+
+message DirectoryStats {
+  int32 total_peers = 1;
+  int32 online_peers = 2;
+  int32 total_files = 3;
+  int64 total_storage = 4;
+  repeated PeerStats top_peers = 5;
+  repeated string popular_files = 6;
+}
+
+message PeerStats {
+  string peer_id = 1;
+  int32 file_count = 2;
+  int64 storage_size = 3;
+  int32 download_count = 4;
+}
