@@ -399,7 +399,12 @@ class P2PServer {
 
 // Start the server if this file is run directly
 if (require.main === module) {
-    const configPath = process.argv[2] || './config/peer1.json';
+    // Buscar el argumento --config y tomar el valor siguiente
+    let configPath = './config/peer1.json';
+    const configIndex = process.argv.indexOf('--config');
+    if (configIndex !== -1 && process.argv[configIndex + 1]) {
+        configPath = process.argv[configIndex + 1];
+    }
     const p2pServer = new P2PServer();
     p2pServer.start(configPath).catch(error => {
         console.error('Error al iniciar el servidor P2P:', error);
@@ -407,4 +412,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = P2PServer;
+module.exports = P2PServer; 
