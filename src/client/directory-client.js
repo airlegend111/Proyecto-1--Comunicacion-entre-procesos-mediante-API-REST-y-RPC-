@@ -145,18 +145,18 @@ class DirectoryClient {
             prompt: `Directory-Client[${this.config.serverId}]> `
         });
 
-        console.log('\n=== Directory Service Client ===');
-        console.log('Available commands:');
-        console.log('  start       - Start the directory service');
-        console.log('  test        - Test directory service endpoints');
-        console.log('  health      - Check directory service health');
-        console.log('  peers       - List all registered peers');
-        console.log('  files       - List all files in the system');
-        console.log('  search <filename> - Search for files');
-        console.log('  stats       - Get directory service statistics');
-        console.log('  cleanup     - Cleanup orphaned files');
-        console.log('  help        - Show this help');
-        console.log('  exit        - Exit the client\n');
+        console.log('\n=== Cliente del Servicio de Directorio ===');
+        console.log('Comandos disponibles:');
+        console.log('  start       - Iniciar el servicio de directorio');
+        console.log('  test        - Probar endpoints del servicio de directorio');
+        console.log('  health      - Verificar salud del servicio de directorio');
+        console.log('  peers       - Listar todos los peers registrados');
+        console.log('  files       - Listar todos los archivos del sistema');
+        console.log('  search <archivo> - Buscar archivos');
+        console.log('  stats       - Obtener estadísticas del servicio de directorio');
+        console.log('  cleanup     - Limpiar archivos huérfanos');
+        console.log('  help        - Mostrar esta ayuda');
+        console.log('  exit        - Salir del cliente\n');
 
         rl.prompt();
 
@@ -166,7 +166,7 @@ class DirectoryClient {
             try {
                 switch (command.toLowerCase()) {
                     case 'start':
-                        console.log('Starting directory service...');
+                        console.log('Iniciando servicio de directorio...');
                         await this.start();
                         break;
 
@@ -193,7 +193,7 @@ class DirectoryClient {
 
                     case 'search':
                         if (args.length === 0) {
-                            console.log('Usage: search <filename>');
+                            console.log('Uso: search <archivo>');
                             break;
                         }
                         const searchResult = await this.networkUtils.makeRequest('GET', `${baseUrl}/search/${args[0]}`);
@@ -211,20 +211,20 @@ class DirectoryClient {
                         break;
 
                     case 'help':
-                        console.log('Available commands: start, test, health, peers, files, search, stats, cleanup, help, exit');
+                        console.log('Comandos disponibles: start, test, health, peers, files, search, stats, cleanup, help, exit');
                         break;
 
                     case 'exit':
-                        console.log('Goodbye!');
+                        console.log('¡Hasta luego!');
                         rl.close();
                         process.exit(0);
                         break;
 
                     default:
-                        console.log('Unknown command. Type "help" for available commands.');
+                        console.log('Comando desconocido. Escribe "help" para ver los comandos disponibles.');
                 }
             } catch (error) {
-                console.error('Command error:', error.message);
+                console.error('Error en comando:', error.message);
             }
 
             rl.prompt();
@@ -244,7 +244,7 @@ if (require.main === module) {
     directoryClient.initialize(configPath)
         .then(() => directoryClient.startCLI())
         .catch(error => {
-            console.error('Failed to start directory client:', error);
+            console.error('Error al iniciar el cliente de directorio:', error);
             process.exit(1);
         });
 }

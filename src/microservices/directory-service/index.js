@@ -49,12 +49,12 @@ class DirectoryService {
             // Setup error handling
             this.setupErrorHandling();
 
-            this.logger.info('Directory service initialized successfully', {
+            this.logger.info('Servicio de directorio inicializado exitosamente', {
                 port: this.config.port,
                 registryFile: this.config.registryFile
             });
         } catch (error) {
-            console.error('Failed to initialize directory service:', error.message);
+            console.error('Error al inicializar el servicio de directorio:', error.message);
             process.exit(1);
         }
     }
@@ -275,7 +275,7 @@ class DirectoryService {
             await this.initialize();
             
             this.server = this.app.listen(this.config.port, this.config.ip, () => {
-                this.logger.info('Directory service started', {
+                this.logger.info('Servicio de directorio iniciado', {
                     port: this.config.port,
                     ip: this.config.ip,
                     url: `http://${this.config.ip}:${this.config.port}`
@@ -287,7 +287,7 @@ class DirectoryService {
             process.on('SIGINT', () => this.shutdown());
 
         } catch (error) {
-            this.logger.error('Failed to start directory service', { error: error.message });
+            this.logger.error('Error al iniciar el servicio de directorio', { error: error.message });
             process.exit(1);
         }
     }
@@ -297,18 +297,18 @@ class DirectoryService {
      */
     async shutdown() {
         try {
-            this.logger.info('Shutting down directory service...');
+            this.logger.info('Deteniendo el servicio de directorio...');
             
             if (this.server) {
                 this.server.close(() => {
-                    this.logger.info('Directory service stopped');
+                    this.logger.info('Servicio de directorio detenido');
                     process.exit(0);
                 });
             } else {
                 process.exit(0);
             }
         } catch (error) {
-            this.logger.error('Error during shutdown', { error: error.message });
+            this.logger.error('Error durante el cierre', { error: error.message });
             process.exit(1);
         }
     }
@@ -318,7 +318,7 @@ class DirectoryService {
 if (require.main === module) {
     const directoryService = new DirectoryService();
     directoryService.start().catch(error => {
-        console.error('Failed to start directory service:', error);
+        console.error('Error al iniciar el servicio de directorio:', error);
         process.exit(1);
     });
 }

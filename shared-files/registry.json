@@ -1,0 +1,31 @@
+{
+  "peers": [
+    [
+      "peer1",
+      {
+        "peerId": "peer1",
+        "ip": "0.0.0.0",
+        "restPort": 3001,
+        "files": [
+          "sample1.txt"
+        ],
+        "status": "online",
+        "registeredAt": "2025-09-22T03:40:15.279Z",
+        "lastSeen": "2025-09-22T03:40:15.279Z"
+      }
+    ]
+  ],
+  "fileIndex": [
+    [
+      "sample1.txt",
+      [
+        {
+          "peerId": "peer1",
+          "ip": "0.0.0.0",
+          "restPort": 3001
+        }
+      ]
+    ]
+  ],
+  "lastUpdated": "2025-09-22T03:40:15.279Z"
+}

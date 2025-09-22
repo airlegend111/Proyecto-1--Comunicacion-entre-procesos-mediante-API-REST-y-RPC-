@@ -1,82 +1,89 @@
-# P2P File Sharing System
+# Sistema P2P de Compartir Archivos
 
-A distributed peer-to-peer file sharing system with hybrid architecture using a central directory server and distributed peers. Built with Node.js, Express, and REST APIs.
+Un sistema distribuido de compartir archivos peer-to-peer con arquitectura híbrida que utiliza un servidor de directorio central y peers distribuidos. Construido con Node.js, Express y APIs REST.
 
-## 🏗️ Architecture
+## 🏗️ Arquitectura
 
-The system consists of 4 main microservices:
+El sistema consta de 4 microservicios principales:
 
-1. **Directory Service** - Central registry for peer management and file indexing
-2. **File Query Service** - File scanning and discovery for each peer
-3. **Transfer Service** - File upload/download operations
-4. **Peer Discovery** - Network bootstrap and health monitoring
+1. **Servicio de Directorio** - Registro central para gestión de peers e indexación de archivos
+2. **Servicio de Consulta de Archivos** - Escaneo y descubrimiento de archivos para cada peer
+3. **Servicio de Transferencia** - Operaciones de subida/descarga de archivos
+4. **Descubrimiento de Peers** - Bootstrap de red y monitoreo de salud
 
-## 🚀 Quick Start
+## 🚀 Inicio Rápido
 
-### Prerequisites
+### Prerrequisitos
 
 - Node.js 16+ 
 - npm
 
-### Installation
+### Instalación
 
 ```bash
-# Clone the repository
+# Clonar el repositorio
 git clone <repository-url>
 cd p2p-file-sharing
 
-# Install dependencies
+# Instalar dependencias
 npm install
 
-# Start the entire network
+# Iniciar toda la red
+# En Windows (PowerShell):
+.\scripts\start-network.ps1
+
+# En Windows (CMD):
+scripts\start-network.bat
+
+# En Linux/Mac:
 ./scripts/start-network.sh
 ```
 
-### Manual Start
+### Inicio Manual
 
 ```bash
-# Start directory server
+# Iniciar servidor de directorio
 node src/microservices/directory-service/index.js
 
-# Start peer servers (in separate terminals)
+# Iniciar servidores peer (en terminales separadas)
 node src/server/p-servidor.js config/peer1.json
 node src/server/p-servidor.js config/peer2.json
 node src/server/p-servidor.js config/peer3.json
 ```
 
-## 📁 Project Structure
+## 📁 Estructura del Proyecto
 
 ```
 src/
 ├── microservices/
-│   ├── directory-service/     # Central directory management
+│   ├── directory-service/     # Gestión central del directorio
 │   │   ├── registry.service.js
 │   │   ├── file-index.service.js
 │   │   └── index.js
-│   ├── file-query-service/    # File scanning and discovery
+│   ├── file-query-service/    # Escaneo y descubrimiento de archivos
 │   │   ├── file-scanners.js
 │   │   └── index.js
-│   ├── transfer-service/      # File upload/download
+│   ├── transfer-service/      # Subida/descarga de archivos
 │   │   ├── upload.service.js
 │   │   ├── download.service.js
 │   │   └── index.js
-│   └── peer-discovery/        # Network bootstrap and health
+│   └── peer-discovery/        # Bootstrap de red y salud
 │       ├── bootstrap.js
 │       └── health-check.js
-├── client/                    # Client applications
+├── client/                    # Aplicaciones cliente
 │   ├── p-cliente.js
 │   └── directory-client.js
-├── server/                    # Main server
+├── server/                    # Servidor principal
 │   └── p-servidor.js
-└── utils/                     # Shared utilities
+└── utils/                     # Utilidades compartidas
     ├── config-loader.js
     ├── logger.js
     └── network.js
 ```
 
-## 🔧 Configuration
+## 🔧 Configuración
 
-### Directory Server (config/directory-server.json)
+### Servidor de Directorio (config/directory-server.json)
 ```json
 {
   "serverId": "directory",
@@ -86,7 +93,7 @@ src/
 }
 ```
 
-### Peer Configuration (config/peer1.json)
+### Configuración de Peer (config/peer1.json)
 ```json
 {
   "peerId": "peer1",
@@ -100,143 +107,143 @@ src/
 }
 ```
 
-## 🌐 API Endpoints
+## 🌐 Endpoints de API
 
-### Directory Service (Port 4000)
+### Servicio de Directorio (Puerto 4000)
 
-| Method | Endpoint | Description |
+| Método | Endpoint | Descripción |
 |--------|----------|-------------|
-| GET | `/health` | Health check |
-| GET | `/ping` | Ping test |
-| POST | `/register` | Register peer |
-| GET | `/peers` | List all peers |
-| DELETE | `/unregister/:peerId` | Unregister peer |
-| GET | `/search/:filename` | Search files |
-| GET | `/files` | List all files |
-| GET | `/stats` | System statistics |
+| GET | `/health` | Verificación de salud |
+| GET | `/ping` | Prueba de ping |
+| POST | `/register` | Registrar peer |
+| GET | `/peers` | Listar todos los peers |
+| DELETE | `/unregister/:peerId` | Desregistrar peer |
+| GET | `/search/:filename` | Buscar archivos |
+| GET | `/files` | Listar todos los archivos |
+| GET | `/stats` | Estadísticas del sistema |
 
-### Peer Services (Ports 3001-3003)
+### Servicios Peer (Puertos 3001-3003)
 
-| Method | Endpoint | Description |
+| Método | Endpoint | Descripción |
 |--------|----------|-------------|
-| GET | `/health` | Health check |
-| GET | `/ping` | Ping test |
-| GET | `/files` | List peer files |
-| POST | `/refresh` | Refresh file list |
-| GET | `/download/:filename` | Download file |
-| POST | `/upload` | Upload file |
-| GET | `/search/:filename` | Search files |
+| GET | `/health` | Verificación de salud |
+| GET | `/ping` | Prueba de ping |
+| GET | `/files` | Listar archivos del peer |
+| POST | `/refresh` | Actualizar lista de archivos |
+| GET | `/download/:filename` | Descargar archivo |
+| POST | `/upload` | Subir archivo |
+| GET | `/search/:filename` | Buscar archivos |
 
-## 🎯 Usage Examples
+## 🎯 Ejemplos de Uso
 
-### Using the CLI Client
+### Usando el Cliente CLI
 
 ```bash
-# Start a peer client
+# Iniciar un cliente peer
 node src/client/p-cliente.js config/peer1.json
 
-# Available commands:
-connect                    # Connect to P2P network
-disconnect                 # Disconnect from network
-peers                      # List all peers
-search <filename>          # Search for files
-download <peerUrl> <file>  # Download file from peer
-upload <peerUrl> <file>    # Upload file to peer
-files <peerUrl>            # Get files from peer
-ping <peerUrl>             # Ping a peer
-status                     # Show connection status
+# Comandos disponibles:
+connect                    # Conectar a la red P2P
+disconnect                 # Desconectar de la red
+peers                      # Listar todos los peers
+search <archivo>           # Buscar archivos
+download <peerUrl> <archivo>  # Descargar archivo del peer
+upload <peerUrl> <archivo>    # Subir archivo al peer
+files <peerUrl>            # Obtener archivos del peer
+ping <peerUrl>             # Hacer ping a un peer
+status                     # Mostrar estado de conexión
 ```
 
-### Using HTTP API
+### Usando la API HTTP
 
 ```bash
-# Search for files
+# Buscar archivos
 curl http://localhost:4000/search/document
 
-# Get peer list
+# Obtener lista de peers
 curl http://localhost:4000/peers
 
-# Download file from peer
+# Descargar archivo del peer
 curl http://localhost:3001/download/sample1.txt
 
-# Upload file to peer
+# Subir archivo al peer
 curl -X POST -F "file=@myfile.txt" http://localhost:3001/upload
 ```
 
-## 🔍 Features
+## 🔍 Características
 
-- **Hybrid Architecture**: Central directory + distributed peers
-- **File Discovery**: Automatic file scanning and indexing
-- **Health Monitoring**: Continuous peer health checks
-- **RESTful API**: Standard HTTP endpoints
-- **Error Handling**: Robust error handling and logging
-- **Configuration Management**: JSON-based configuration
-- **Logging**: Comprehensive logging with timestamps
-- **File Validation**: File type and size validation
-- **Caching**: Download result caching
-- **Backup**: Automatic file backup on overwrite
+- **Arquitectura Híbrida**: Directorio central + peers distribuidos
+- **Descubrimiento de Archivos**: Escaneo e indexación automática de archivos
+- **Monitoreo de Salud**: Verificaciones continuas de salud de peers
+- **API RESTful**: Endpoints HTTP estándar
+- **Manejo de Errores**: Manejo robusto de errores y logging
+- **Gestión de Configuración**: Configuración basada en JSON
+- **Logging**: Logging comprensivo con timestamps
+- **Validación de Archivos**: Validación de tipo y tamaño de archivos
+- **Caché**: Caché de resultados de descarga
+- **Respaldo**: Respaldo automático de archivos al sobrescribir
 
-## 🛠️ Development
+## 🛠️ Desarrollo
 
-### Running Individual Services
+### Ejecutando Servicios Individuales
 
 ```bash
-# Directory service only
+# Solo servicio de directorio
 node src/microservices/directory-service/index.js
 
-# File query service only
+# Solo servicio de consulta de archivos
 node src/microservices/file-query-service/index.js
 
-# Transfer service only
+# Solo servicio de transferencia
 node src/microservices/transfer-service/index.js
 ```
 
-### Testing
+### Pruebas
 
 ```bash
-# Test directory service endpoints
+# Probar endpoints del servicio de directorio
 node src/client/directory-client.js
 
-# Test peer connectivity
+# Probar conectividad de peers
 curl http://localhost:4000/health
 curl http://localhost:3001/ping
 ```
 
-## 📊 Monitoring
+## 📊 Monitoreo
 
-- **Logs**: Written to `logs/` directory
-- **Health Checks**: Available at `/health` endpoints
-- **Statistics**: Available at `/stats` endpoints
-- **Peer Status**: Monitor via `/peers` endpoint
+- **Logs**: Escritos en el directorio `logs/`
+- **Verificaciones de Salud**: Disponibles en endpoints `/health`
+- **Estadísticas**: Disponibles en endpoints `/stats`
+- **Estado de Peers**: Monitorear vía endpoint `/peers`
 
-## 🔧 Troubleshooting
+## 🔧 Solución de Problemas
 
-### Common Issues
+### Problemas Comunes
 
-1. **Port conflicts**: Ensure ports 3001-3003 and 4000 are available
-2. **Directory not found**: Run `mkdir -p config/shared-files/peer{1,2,3}`
-3. **Permission errors**: Check file permissions in shared directories
-4. **Connection failures**: Verify directory server is running first
+1. **Conflictos de puertos**: Asegurar que los puertos 3001-3003 y 4000 estén disponibles
+2. **Directorio no encontrado**: Ejecutar `mkdir -p config/shared-files/peer{1,2,3}`
+3. **Errores de permisos**: Verificar permisos de archivos en directorios compartidos
+4. **Fallos de conexión**: Verificar que el servidor de directorio esté ejecutándose primero
 
-### Debug Mode
+### Modo Debug
 
-Set environment variable for detailed logging:
+Establecer variable de entorno para logging detallado:
 ```bash
 DEBUG=* node src/server/p-servidor.js config/peer1.json
 ```
 
-## 📝 License
+## 📝 Licencia
 
-MIT License - see LICENSE file for details
+Licencia MIT - ver archivo LICENSE para detalles
 
-## 🤝 Contributing
+## 🤝 Contribuir
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+1. Hacer fork del repositorio
+2. Crear una rama de característica
+3. Hacer tus cambios
+4. Agregar pruebas si es aplicable
+5. Enviar un pull request
 
-## 📞 Support
+## 📞 Soporte
 
-For issues and questions, please open an issue in the repository.
+Para problemas y preguntas, por favor abrir un issue en el repositorio.

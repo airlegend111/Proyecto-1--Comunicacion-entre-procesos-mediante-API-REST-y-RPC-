@@ -1,0 +1,46 @@
+[2025-09-22T03:35:17.890Z] [directory-service] [INFO] Servicio de directorio inicializado exitosamente | {"port":4000,"registryFile":"./shared-files/registry.json"}
+[2025-09-22T03:35:17.934Z] [directory-service] [INFO] Servicio de directorio iniciado | {"port":4000,"ip":"0.0.0.0","url":"http://0.0.0.0:4000"}
+[2025-09-22T03:35:17.936Z] [directory-service] [WARN] Registry file not found, creating new registry | {"error":"ENOENT: no such file or directory, open 'C:\\Users\\Pupu\\Documents\\semestre 6\\Proyecto-1--Comunicacion-entre-procesos-mediante-API-REST-y-RPC-\\shared-files\\registry.json'"}
+[2025-09-22T03:35:17.940Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-22T03:35:34.870Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:35:34 +0000] "GET /health HTTP/1.1" 200 143 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-22T03:35:45.149Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:35:45 +0000] "GET /health HTTP/1.1" 200 143 "-" "axios/1.12.2"
+[2025-09-22T03:35:45.187Z] [directory-service] [DEBUG] File index updated | {"peerId":"peer1","fileCount":1}
+[2025-09-22T03:35:45.190Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-22T03:35:45.190Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer1","ip":"0.0.0.0","restPort":3001}
+[2025-09-22T03:35:45.192Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:35:45 +0000] "POST /register HTTP/1.1" 201 236 "-" "axios/1.12.2"
+[2025-09-22T03:35:55.165Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:35:55 +0000] "GET /health HTTP/1.1" 200 143 "-" "axios/1.12.2"
+[2025-09-22T03:36:15.224Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:36:15 +0000] "GET /health HTTP/1.1" 200 143 "-" "axios/1.12.2"
+[2025-09-22T03:36:15.226Z] [directory-service] [DEBUG] File index updated | {"peerId":"peer1","fileCount":1}
+[2025-09-22T03:36:15.228Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-22T03:36:15.228Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer1","ip":"0.0.0.0","restPort":3001}
+[2025-09-22T03:36:15.229Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:36:15 +0000] "POST /register HTTP/1.1" 201 236 "-" "axios/1.12.2"
+[2025-09-22T03:36:45.230Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:36:45 +0000] "GET /health HTTP/1.1" 200 143 "-" "axios/1.12.2"
+[2025-09-22T03:36:45.232Z] [directory-service] [DEBUG] File index updated | {"peerId":"peer1","fileCount":1}
+[2025-09-22T03:36:45.234Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-22T03:36:45.235Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer1","ip":"0.0.0.0","restPort":3001}
+[2025-09-22T03:36:45.236Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:36:45 +0000] "POST /register HTTP/1.1" 201 236 "-" "axios/1.12.2"
+[2025-09-22T03:37:15.241Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:37:15 +0000] "GET /health HTTP/1.1" 200 143 "-" "axios/1.12.2"
+[2025-09-22T03:37:15.243Z] [directory-service] [DEBUG] File index updated | {"peerId":"peer1","fileCount":1}
+[2025-09-22T03:37:15.244Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-22T03:37:15.244Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer1","ip":"0.0.0.0","restPort":3001}
+[2025-09-22T03:37:15.245Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:37:15 +0000] "POST /register HTTP/1.1" 201 236 "-" "axios/1.12.2"
+[2025-09-22T03:37:45.254Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:37:45 +0000] "GET /health HTTP/1.1" 200 143 "-" "axios/1.12.2"
+[2025-09-22T03:37:45.257Z] [directory-service] [DEBUG] File index updated | {"peerId":"peer1","fileCount":1}
+[2025-09-22T03:37:45.258Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-22T03:37:45.259Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer1","ip":"0.0.0.0","restPort":3001}
+[2025-09-22T03:37:45.259Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:37:45 +0000] "POST /register HTTP/1.1" 201 236 "-" "axios/1.12.2"
+[2025-09-22T03:38:15.257Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:38:15 +0000] "GET /health HTTP/1.1" 200 143 "-" "axios/1.12.2"
+[2025-09-22T03:38:15.258Z] [directory-service] [DEBUG] File index updated | {"peerId":"peer1","fileCount":1}
+[2025-09-22T03:38:15.260Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-22T03:38:15.260Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer1","ip":"0.0.0.0","restPort":3001}
+[2025-09-22T03:38:15.261Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:38:15 +0000] "POST /register HTTP/1.1" 201 236 "-" "axios/1.12.2"
+[2025-09-22T03:38:45.259Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:38:45 +0000] "GET /health HTTP/1.1" 200 143 "-" "axios/1.12.2"
+[2025-09-22T03:38:45.261Z] [directory-service] [DEBUG] File index updated | {"peerId":"peer1","fileCount":1}
+[2025-09-22T03:38:45.262Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer1","ip":"0.0.0.0","restPort":3001}
+[2025-09-22T03:38:45.262Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-22T03:38:45.263Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:38:45 +0000] "POST /register HTTP/1.1" 201 236 "-" "axios/1.12.2"
+[2025-09-22T03:39:15.270Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:39:15 +0000] "GET /health HTTP/1.1" 200 143 "-" "axios/1.12.2"
+[2025-09-22T03:39:15.272Z] [directory-service] [DEBUG] File index updated | {"peerId":"peer1","fileCount":1}
+[2025-09-22T03:39:15.274Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-22T03:39:15.274Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer1","ip":"0.0.0.0","restPort":3001}
+[2025-09-22T03:39:15.275Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:39:15 +0000] "POST /register HTTP/1.1" 201 236 "-" "axios/1.12.2"

@@ -54,14 +54,14 @@ class P2PServer {
             this.setupErrorHandling();
 
             this.isInitialized = true;
-            this.logger.info('P2P server initialized successfully', {
+            this.logger.info('Servidor P2P inicializado exitosamente', {
                 peerId: this.config.peerId,
                 restPort: this.config.restPort,
                 grpcPort: this.config.grpcPort,
                 sharedDirectory: this.config.sharedDirectory
             });
         } catch (error) {
-            console.error('Failed to initialize P2P server:', error.message);
+            console.error('Error al inicializar el servidor P2P:', error.message);
             throw error;
         }
     }
@@ -339,7 +339,7 @@ class P2PServer {
             await this.initialize(configPath);
             
             this.server = this.app.listen(this.config.restPort, this.config.ip, () => {
-                this.logger.info('P2P server started', {
+                this.logger.info('Servidor P2P iniciado', {
                     port: this.config.restPort,
                     ip: this.config.ip,
                     url: `http://${this.config.ip}:${this.config.restPort}`
@@ -362,7 +362,7 @@ class P2PServer {
             process.on('SIGINT', () => this.shutdown());
 
         } catch (error) {
-            this.logger.error('Failed to start P2P server', { error: error.message });
+            this.logger.error('Error al iniciar el servidor P2P', { error: error.message });
             process.exit(1);
         }
     }
@@ -372,7 +372,7 @@ class P2PServer {
      */
     async shutdown() {
         try {
-            this.logger.info('Shutting down P2P server...');
+            this.logger.info('Deteniendo el servidor P2P...');
             
             if (this.bootstrapService) {
                 await this.bootstrapService.shutdown();
@@ -384,14 +384,14 @@ class P2PServer {
             
             if (this.server) {
                 this.server.close(() => {
-                    this.logger.info('P2P server stopped');
+                    this.logger.info('Servidor P2P detenido');
                     process.exit(0);
                 });
             } else {
                 process.exit(0);
             }
         } catch (error) {
-            this.logger.error('Error during shutdown', { error: error.message });
+            this.logger.error('Error durante el cierre', { error: error.message });
             process.exit(1);
         }
     }
@@ -402,7 +402,7 @@ if (require.main === module) {
     const configPath = process.argv[2] || './config/peer1.json';
     const p2pServer = new P2PServer();
     p2pServer.start(configPath).catch(error => {
-        console.error('Failed to start P2P server:', error);
+        console.error('Error al iniciar el servidor P2P:', error);
         process.exit(1);
     });
 }

@@ -408,19 +408,19 @@ class P2PClient {
             prompt: `P2P-Client[${this.config.peerId}]> `
         });
 
-        console.log('\n=== P2P File Sharing Client ===');
-        console.log('Available commands:');
-        console.log('  connect     - Connect to P2P network');
-        console.log('  disconnect  - Disconnect from P2P network');
-        console.log('  peers       - List all peers');
-        console.log('  search <filename> - Search for files');
-        console.log('  download <peerUrl> <filename> - Download file from peer');
-        console.log('  upload <peerUrl> <filename> - Upload file to peer');
-        console.log('  files <peerUrl> - Get files from peer');
-        console.log('  ping <peerUrl> - Ping a peer');
-        console.log('  status      - Show connection status');
-        console.log('  help        - Show this help');
-        console.log('  exit        - Exit the client\n');
+        console.log('\n=== Cliente P2P de Compartir Archivos ===');
+        console.log('Comandos disponibles:');
+        console.log('  connect     - Conectar a la red P2P');
+        console.log('  disconnect  - Desconectar de la red P2P');
+        console.log('  peers       - Listar todos los peers');
+        console.log('  search <archivo> - Buscar archivos');
+        console.log('  download <peerUrl> <archivo> - Descargar archivo del peer');
+        console.log('  upload <peerUrl> <archivo> - Subir archivo al peer');
+        console.log('  files <peerUrl> - Obtener archivos del peer');
+        console.log('  ping <peerUrl> - Hacer ping a un peer');
+        console.log('  status      - Mostrar estado de conexión');
+        console.log('  help        - Mostrar esta ayuda');
+        console.log('  exit        - Salir del cliente\n');
 
         rl.prompt();
 
@@ -446,7 +446,7 @@ class P2PClient {
 
                     case 'search':
                         if (args.length === 0) {
-                            console.log('Usage: search <filename>');
+                            console.log('Uso: search <archivo>');
                             break;
                         }
                         const searchResult = await this.searchFiles(args[0]);
@@ -455,7 +455,7 @@ class P2PClient {
 
                     case 'download':
                         if (args.length < 2) {
-                            console.log('Usage: download <peerUrl> <filename>');
+                            console.log('Uso: download <peerUrl> <archivo>');
                             break;
                         }
                         const downloadResult = await this.downloadFile(args[0], args[1]);
@@ -464,13 +464,13 @@ class P2PClient {
 
                     case 'upload':
                         if (args.length < 2) {
-                            console.log('Usage: upload <peerUrl> <filename>');
+                            console.log('Uso: upload <peerUrl> <archivo>');
                             break;
                         }
-                        // For demo purposes, create a simple file
+                        // Para propósitos de demostración, crear un archivo simple
                         const fileData = {
                             filename: args[1],
-                            content: `Hello from ${this.config.peerId}!`,
+                            content: `¡Hola desde ${this.config.peerId}!`,
                             mimeType: 'text/plain'
                         };
                         const uploadResult = await this.uploadFile(args[0], fileData);
@@ -479,7 +479,7 @@ class P2PClient {
 
                     case 'files':
                         if (args.length === 0) {
-                            console.log('Usage: files <peerUrl>');
+                            console.log('Uso: files <peerUrl>');
                             break;
                         }
                         const filesResult = await this.getPeerFiles(args[0]);
@@ -488,7 +488,7 @@ class P2PClient {
 
                     case 'ping':
                         if (args.length === 0) {
-                            console.log('Usage: ping <peerUrl>');
+                            console.log('Uso: ping <peerUrl>');
                             break;
                         }
                         const pingResult = await this.pingPeer(args[0]);
@@ -500,20 +500,20 @@ class P2PClient {
                         break;
 
                     case 'help':
-                        console.log('Available commands: connect, disconnect, peers, search, download, upload, files, ping, status, help, exit');
+                        console.log('Comandos disponibles: connect, disconnect, peers, search, download, upload, files, ping, status, help, exit');
                         break;
 
                     case 'exit':
-                        console.log('Goodbye!');
+                        console.log('¡Hasta luego!');
                         rl.close();
                         process.exit(0);
                         break;
 
                     default:
-                        console.log('Unknown command. Type "help" for available commands.');
+                        console.log('Comando desconocido. Escribe "help" para ver los comandos disponibles.');
                 }
             } catch (error) {
-                console.error('Command error:', error.message);
+                console.error('Error en comando:', error.message);
             }
 
             rl.prompt();
@@ -536,7 +536,7 @@ if (require.main === module) {
     p2pClient.initialize(configPath)
         .then(() => p2pClient.startCLI())
         .catch(error => {
-            console.error('Failed to start P2P client:', error);
+            console.error('Error al iniciar el cliente P2P:', error);
             process.exit(1);
         });
 }

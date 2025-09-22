@@ -58,16 +58,16 @@ class RegistryService {
     }
 
     /**
-     * Register a new peer
-     * @param {Object} peerData - Peer registration data
-     * @returns {Object} Registration result
+     * Registrar un nuevo peer
+     * @param {Object} peerData - Datos de registro del peer
+     * @returns {Object} Resultado del registro
      */
     async registerPeer(peerData) {
         try {
             const { peerId, ip, restPort, files = [] } = peerData;
             
             if (!peerId || !ip || !restPort) {
-                throw new Error('Missing required fields: peerId, ip, restPort');
+                throw new Error('Faltan campos requeridos: peerId, ip, restPort');
             }
 
             const peerInfo = {
@@ -82,20 +82,20 @@ class RegistryService {
 
             this.peers.set(peerId, peerInfo);
             
-            // Update file index
+            // Actualizar índice de archivos
             await this.updateFileIndex(peerId, files);
             
             await this.saveRegistry();
             
-            this.logger.info('Peer registered successfully', { peerId, ip, restPort });
+            this.logger.info('Peer registrado exitosamente', { peerId, ip, restPort });
             
             return {
                 success: true,
-                message: 'Peer registered successfully',
+                message: 'Peer registrado exitosamente',
                 peer: peerInfo
             };
         } catch (error) {
-            this.logger.error('Failed to register peer', { error: error.message, peerData });
+            this.logger.error('Error al registrar peer', { error: error.message, peerData });
             return {
                 success: false,
                 message: error.message
@@ -104,19 +104,19 @@ class RegistryService {
     }
 
     /**
-     * Unregister a peer
-     * @param {string} peerId - Peer ID to unregister
-     * @returns {Object} Unregistration result
+     * Desregistrar un peer
+     * @param {string} peerId - ID del peer a desregistrar
+     * @returns {Object} Resultado de la desregistración
      */
     async unregisterPeer(peerId) {
         try {
             if (!this.peers.has(peerId)) {
-                throw new Error(`Peer ${peerId} not found`);
+                throw new Error(`Peer ${peerId} no encontrado`);
             }
 
             const peer = this.peers.get(peerId);
             
-            // Remove files from index
+            // Remover archivos del índice
             for (const filename of peer.files) {
                 const filePeers = this.fileIndex.get(filename) || [];
                 const updatedPeers = filePeers.filter(p => p.peerId !== peerId);
@@ -131,14 +131,14 @@ class RegistryService {
             this.peers.delete(peerId);
             await this.saveRegistry();
             
-            this.logger.info('Peer unregistered successfully', { peerId });
+            this.logger.info('Peer desregistrado exitosamente', { peerId });
             
             return {
                 success: true,
-                message: 'Peer unregistered successfully'
+                message: 'Peer desregistrado exitosamente'
             };
         } catch (error) {
-            this.logger.error('Failed to unregister peer', { error: error.message, peerId });
+            this.logger.error('Error al desregistrar peer', { error: error.message, peerId });
             return {
                 success: false,
                 message: error.message
@@ -147,8 +147,8 @@ class RegistryService {
     }
 
     /**
-     * Get all registered peers
-     * @returns {Object} Peers list
+     * Obtener todos los peers registrados
+     * @returns {Object} Lista de peers
      */
     async getPeers() {
         try {
@@ -162,7 +162,7 @@ class RegistryService {
                 lastSeen: peer.lastSeen
             }));
 
-            this.logger.debug('Retrieved peers list', { count: peersList.length });
+            this.logger.debug('Lista de peers obtenida', { count: peersList.length });
             
             return {
                 success: true,
@@ -170,7 +170,7 @@ class RegistryService {
                 count: peersList.length
             };
         } catch (error) {
-            this.logger.error('Failed to get peers', { error: error.message });
+            this.logger.error('Error al obtener peers', { error: error.message });
             return {
                 success: false,
                 message: error.message,
@@ -180,9 +180,9 @@ class RegistryService {
     }
 
     /**
-     * Search for files
-     * @param {string} filename - Filename to search
-     * @returns {Object} Search results
+     * Buscar archivos
+     * @param {string} filename - Nombre del archivo a buscar
+     * @returns {Object} Resultados de búsqueda
      */
     async searchFiles(filename) {
         try {
@@ -195,7 +195,7 @@ class RegistryService {
                 url: `http://${peer.ip}:${peer.restPort}`
             }));
 
-            this.logger.info('File search completed', { 
+            this.logger.info('Búsqueda de archivos completada', { 
                 filename, 
                 resultCount: results.length 
             });
@@ -207,7 +207,7 @@ class RegistryService {
                 count: results.length
             };
         } catch (error) {
-            this.logger.error('Failed to search files', { error: error.message, filename });
+            this.logger.error('Error al buscar archivos', { error: error.message, filename });
             return {
                 success: false,
                 message: error.message,

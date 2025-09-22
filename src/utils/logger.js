@@ -58,9 +58,9 @@ class Logger {
     }
 
     /**
-     * Log info message
-     * @param {string} message - Log message
-     * @param {Object} metadata - Additional metadata
+     * Registrar mensaje de información
+     * @param {string} message - Mensaje de log
+     * @param {Object} metadata - Metadatos adicionales
      */
     info(message, metadata = {}) {
         const logMessage = this.formatMessage('INFO', message, metadata);
@@ -69,9 +69,9 @@ class Logger {
     }
 
     /**
-     * Log warning message
-     * @param {string} message - Log message
-     * @param {Object} metadata - Additional metadata
+     * Registrar mensaje de advertencia
+     * @param {string} message - Mensaje de log
+     * @param {Object} metadata - Metadatos adicionales
      */
     warn(message, metadata = {}) {
         const logMessage = this.formatMessage('WARN', message, metadata);
@@ -80,9 +80,9 @@ class Logger {
     }
 
     /**
-     * Log error message
-     * @param {string} message - Log message
-     * @param {Object} metadata - Additional metadata
+     * Registrar mensaje de error
+     * @param {string} message - Mensaje de log
+     * @param {Object} metadata - Metadatos adicionales
      */
     error(message, metadata = {}) {
         const logMessage = this.formatMessage('ERROR', message, metadata);
@@ -91,9 +91,9 @@ class Logger {
     }
 
     /**
-     * Log debug message
-     * @param {string} message - Log message
-     * @param {Object} metadata - Additional metadata
+     * Registrar mensaje de depuración
+     * @param {string} message - Mensaje de log
+     * @param {Object} metadata - Metadatos adicionales
      */
     debug(message, metadata = {}) {
         const logMessage = this.formatMessage('DEBUG', message, metadata);
