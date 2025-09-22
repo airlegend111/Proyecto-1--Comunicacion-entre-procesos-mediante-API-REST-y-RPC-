@@ -1,0 +1,96 @@
+[2025-09-22T03:48:39.236Z] [bootstrap-peer3] [INFO] Bootstrap service initialized | {"peerId":"peer3","restPort":3003,"directoryServer":"http://localhost:4000"}
+[2025-09-22T03:48:41.292Z] [bootstrap-peer3] [INFO] Attempting to connect to P2P network
+[2025-09-22T03:48:41.294Z] [bootstrap-peer3] [DEBUG] Making GET request to http://localhost:4000/health | {"data":null,"headers":{}}
+[2025-09-22T03:48:41.324Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":200,"data":{"status":"healthy","service":"directory-service","timestamp":"2025-09-22T03:48:41.313Z","stats":{"peerCount":2,"fileCount":2,"onlinePeers":2}}}
+[2025-09-22T03:48:41.327Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:48:41.328Z] [bootstrap-peer3] [INFO] Registering with directory server | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:48:41.328Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:48:41.327Z"},"headers":{}}
+[2025-09-22T03:48:41.356Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:48:41.331Z","lastSeen":"2025-09-22T03:48:41.331Z"}}}
+[2025-09-22T03:48:41.358Z] [bootstrap-peer3] [INFO] Successfully registered with directory server
+[2025-09-22T03:48:41.358Z] [bootstrap-peer3] [INFO] Successfully connected to P2P network | {"peerId":"peer3","directoryServer":"http://localhost:4000"}
+[2025-09-22T03:48:41.359Z] [bootstrap-peer3] [INFO] Starting periodic registration updates | {"interval":30000}
+[2025-09-22T03:49:11.380Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:49:11.381Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:49:11.380Z"},"headers":{}}
+[2025-09-22T03:49:11.380Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:49:11.405Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:49:11.391Z","lastSeen":"2025-09-22T03:49:11.391Z"}}}
+[2025-09-22T03:49:11.405Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:49:41.401Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:49:41.405Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:49:41.402Z"},"headers":{}}
+[2025-09-22T03:49:41.403Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:49:41.507Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:49:41.506Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:49:41.453Z","lastSeen":"2025-09-22T03:49:41.454Z"}}}
+[2025-09-22T03:50:11.394Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:50:11.395Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:50:11.398Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:50:11.394Z"},"headers":{}}
+[2025-09-22T03:50:11.438Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:50:11.413Z","lastSeen":"2025-09-22T03:50:11.413Z"}}}
+[2025-09-22T03:50:11.439Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:50:41.399Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:50:41.399Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:50:41.398Z"},"headers":{}}
+[2025-09-22T03:50:41.398Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:50:41.478Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:50:41.423Z","lastSeen":"2025-09-22T03:50:41.423Z"}}}
+[2025-09-22T03:50:41.480Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:51:11.401Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:51:11.403Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:51:11.404Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:51:11.402Z"},"headers":{}}
+[2025-09-22T03:51:11.459Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:51:11.427Z","lastSeen":"2025-09-22T03:51:11.427Z"}}}
+[2025-09-22T03:51:11.460Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:51:41.399Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:51:41.402Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:51:41.399Z"},"headers":{}}
+[2025-09-22T03:51:41.401Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:51:41.458Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:51:41.421Z","lastSeen":"2025-09-22T03:51:41.421Z"}}}
+[2025-09-22T03:51:41.460Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:52:11.407Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:52:11.408Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:52:11.409Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:52:11.408Z"},"headers":{}}
+[2025-09-22T03:52:11.444Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:52:11.423Z","lastSeen":"2025-09-22T03:52:11.423Z"}}}
+[2025-09-22T03:52:11.444Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:52:41.428Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:52:41.431Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:52:41.429Z"},"headers":{}}
+[2025-09-22T03:52:41.430Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:52:41.511Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:52:41.468Z","lastSeen":"2025-09-22T03:52:41.468Z"}}}
+[2025-09-22T03:52:41.512Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:53:11.416Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:53:11.416Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:53:11.417Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:53:11.416Z"},"headers":{}}
+[2025-09-22T03:53:11.458Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:53:11.434Z","lastSeen":"2025-09-22T03:53:11.434Z"}}}
+[2025-09-22T03:53:11.458Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:53:41.435Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:53:41.436Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:53:41.437Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:53:41.436Z"},"headers":{}}
+[2025-09-22T03:53:41.470Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:53:41.450Z","lastSeen":"2025-09-22T03:53:41.450Z"}}}
+[2025-09-22T03:53:41.470Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:54:11.443Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:54:11.445Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:54:11.449Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:54:11.443Z"},"headers":{}}
+[2025-09-22T03:54:11.522Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:54:11.479Z","lastSeen":"2025-09-22T03:54:11.479Z"}}}
+[2025-09-22T03:54:11.523Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:54:41.448Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:54:41.449Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:54:41.448Z"},"headers":{}}
+[2025-09-22T03:54:41.448Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:54:41.514Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:54:41.483Z","lastSeen":"2025-09-22T03:54:41.483Z"}}}
+[2025-09-22T03:54:41.515Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:55:11.459Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:55:11.460Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:55:11.461Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:55:11.459Z"},"headers":{}}
+[2025-09-22T03:55:11.499Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:55:11.479Z","lastSeen":"2025-09-22T03:55:11.479Z"}}}
+[2025-09-22T03:55:11.503Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:55:41.471Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:55:41.471Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:55:41.472Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:55:41.471Z"},"headers":{}}
+[2025-09-22T03:55:41.551Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:55:41.490Z","lastSeen":"2025-09-22T03:55:41.491Z"}}}
+[2025-09-22T03:55:41.554Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:56:11.470Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:56:11.472Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:56:11.472Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:56:11.470Z"},"headers":{}}
+[2025-09-22T03:56:11.516Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:56:11.490Z","lastSeen":"2025-09-22T03:56:11.490Z"}}}
+[2025-09-22T03:56:11.517Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:56:41.493Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:56:41.497Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:56:41.497Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:56:41.493Z"},"headers":{}}
+[2025-09-22T03:56:41.558Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:56:41.516Z","lastSeen":"2025-09-22T03:56:41.516Z"}}}
+[2025-09-22T03:56:41.559Z] [bootstrap-peer3] [INFO] Registration updated successfully
+[2025-09-22T03:57:11.500Z] [bootstrap-peer3] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample3.txt"]}
+[2025-09-22T03:57:11.504Z] [bootstrap-peer3] [DEBUG] Making POST request to http://localhost:4000/register | {"data":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"grpcPort":50053,"files":["sample3.txt"],"friendPrimary":"http://localhost:3001","friendBackup":"http://localhost:3002","status":"online","lastSeen":"2025-09-22T03:57:11.500Z"},"headers":{}}
+[2025-09-22T03:57:11.501Z] [bootstrap-peer3] [INFO] Updating registration | {"peerId":"peer3","fileCount":1}
+[2025-09-22T03:57:11.544Z] [bootstrap-peer3] [DEBUG] Request successful | {"status":201,"data":{"success":true,"message":"Peer registrado exitosamente","peer":{"peerId":"peer3","ip":"0.0.0.0","restPort":3003,"files":["sample3.txt"],"status":"online","registeredAt":"2025-09-22T03:57:11.527Z","lastSeen":"2025-09-22T03:57:11.527Z"}}}
+[2025-09-22T03:57:11.545Z] [bootstrap-peer3] [INFO] Registration updated successfully

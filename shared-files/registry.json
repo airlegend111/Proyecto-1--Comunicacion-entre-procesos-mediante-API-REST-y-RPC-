@@ -10,8 +10,36 @@
           "sample1.txt"
         ],
         "status": "online",
-        "registeredAt": "2025-09-22T03:40:15.279Z",
-        "lastSeen": "2025-09-22T03:40:15.279Z"
+        "registeredAt": "2025-09-22T03:57:10.534Z",
+        "lastSeen": "2025-09-22T03:57:10.534Z"
+      }
+    ],
+    [
+      "peer2",
+      {
+        "peerId": "peer2",
+        "ip": "0.0.0.0",
+        "restPort": 3002,
+        "files": [
+          "sample2.txt"
+        ],
+        "status": "online",
+        "registeredAt": "2025-09-22T03:57:11.266Z",
+        "lastSeen": "2025-09-22T03:57:11.266Z"
+      }
+    ],
+    [
+      "peer3",
+      {
+        "peerId": "peer3",
+        "ip": "0.0.0.0",
+        "restPort": 3003,
+        "files": [
+          "sample3.txt"
+        ],
+        "status": "online",
+        "registeredAt": "2025-09-22T03:57:11.527Z",
+        "lastSeen": "2025-09-22T03:57:11.527Z"
       }
     ]
   ],
@@ -25,7 +53,27 @@
           "restPort": 3001
         }
       ]
+    ],
+    [
+      "sample2.txt",
+      [
+        {
+          "peerId": "peer2",
+          "ip": "0.0.0.0",
+          "restPort": 3002
+        }
+      ]
+    ],
+    [
+      "sample3.txt",
+      [
+        {
+          "peerId": "peer3",
+          "ip": "0.0.0.0",
+          "restPort": 3003
+        }
+      ]
     ]
   ],
-  "lastUpdated": "2025-09-22T03:40:15.279Z"
+  "lastUpdated": "2025-09-22T03:57:11.533Z"
 }
