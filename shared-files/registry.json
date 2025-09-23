@@ -4,42 +4,36 @@
       "peer1",
       {
         "peerId": "peer1",
-        "ip": "0.0.0.0",
+        "ip": "localhost",
         "restPort": 3001,
-        "files": [
-          "sample1.txt"
-        ],
+        "files": [],
         "status": "online",
-        "registeredAt": "2025-09-22T03:57:10.534Z",
-        "lastSeen": "2025-09-22T03:57:10.534Z"
+        "registeredAt": "2025-09-23T03:19:13.088Z",
+        "lastSeen": "2025-09-23T03:19:13.088Z"
       }
     ],
     [
       "peer2",
       {
         "peerId": "peer2",
-        "ip": "0.0.0.0",
+        "ip": "localhost",
         "restPort": 3002,
-        "files": [
-          "sample2.txt"
-        ],
+        "files": [],
         "status": "online",
-        "registeredAt": "2025-09-22T03:57:11.266Z",
-        "lastSeen": "2025-09-22T03:57:11.266Z"
+        "registeredAt": "2025-09-23T03:19:36.207Z",
+        "lastSeen": "2025-09-23T03:19:36.207Z"
       }
     ],
     [
       "peer3",
       {
         "peerId": "peer3",
-        "ip": "0.0.0.0",
+        "ip": "localhost",
         "restPort": 3003,
-        "files": [
-          "sample3.txt"
-        ],
+        "files": [],
         "status": "online",
-        "registeredAt": "2025-09-22T03:57:11.527Z",
-        "lastSeen": "2025-09-22T03:57:11.527Z"
+        "registeredAt": "2025-09-23T03:21:19.585Z",
+        "lastSeen": "2025-09-23T03:21:19.585Z"
       }
     ]
   ],
@@ -75,5 +69,5 @@
       ]
     ]
   ],
-  "lastUpdated": "2025-09-22T03:57:11.533Z"
+  "lastUpdated": "2025-09-23T03:21:19.586Z"
 }

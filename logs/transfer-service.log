@@ -1,0 +1,2 @@
+[2025-09-23T03:13:10.423Z] [transfer-service] [INFO] Transfer service initialized successfully | {"port":3001,"sharedDirectory":"./shared-files/peer1"}
+[2025-09-23T03:13:10.441Z] [transfer-service] [INFO] Transfer service started | {"port":3001,"ip":"0.0.0.0","url":"http://0.0.0.0:3001"}

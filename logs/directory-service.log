@@ -331,3 +331,52 @@
 [2025-09-22T03:57:11.537Z] [directory-service] [DEBUG] Registry saved successfully
 [2025-09-22T03:57:11.538Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer3","ip":"0.0.0.0","restPort":3003}
 [2025-09-22T03:57:11.540Z] [directory-service] [INFO] 127.0.0.1 - - [22/Sep/2025:03:57:11 +0000] "POST /register HTTP/1.1" 201 236 "-" "axios/1.12.2"
+[2025-09-23T03:12:54.040Z] [directory-service] [INFO] Servicio de directorio inicializado exitosamente | {"port":4000,"registryFile":"./shared-files/registry.json"}
+[2025-09-23T03:12:54.056Z] [directory-service] [INFO] Servicio de directorio iniciado | {"port":4000,"ip":"0.0.0.0","url":"http://0.0.0.0:4000"}
+[2025-09-23T03:12:54.060Z] [directory-service] [INFO] Registry loaded successfully | {"peerCount":3,"fileCount":3}
+[2025-09-23T03:16:55.088Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:16:55 +0000] "GET /api-docs HTTP/1.1" 301 158 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:16:55.094Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:16:55 +0000] "GET /api-docs/ HTTP/1.1" 200 3106 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:16:55.233Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:16:55 +0000] "GET /api-docs/swagger-ui.css HTTP/1.1" 200 155212 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:16:55.240Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:16:55 +0000] "GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 250335 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:16:55.263Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:16:55 +0000] "GET /api-docs/swagger-ui-init.js HTTP/1.1" 200 6012 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:16:55.268Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:16:55 +0000] "GET /api-docs/swagger-ui-bundle.js HTTP/1.1" 200 1507218 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:16:57.463Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:16:57 +0000] "GET /api-docs/favicon-32x32.png HTTP/1.1" 200 628 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:17:01.031Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:17:01 +0000] "GET /health HTTP/1.1" 200 143 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:17:34.393Z] [directory-service] [INFO] Searching files | {"filename":"test.txt"}
+[2025-09-23T03:17:34.393Z] [directory-service] [INFO] File search completed | {"searchTerm":"test.txt","resultCount":0}
+[2025-09-23T03:17:34.394Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:17:34 +0000] "GET /search/test.txt HTTP/1.1" 200 63 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-23T03:19:13.088Z] [directory-service] [DEBUG] File index updated | {"peerId":"peer1","fileCount":0}
+[2025-09-23T03:19:13.090Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-23T03:19:13.090Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer1","ip":"localhost","restPort":3001}
+[2025-09-23T03:19:13.091Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:19:13 +0000] "POST /register HTTP/1.1" 201 225 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-23T03:19:36.207Z] [directory-service] [DEBUG] File index updated | {"peerId":"peer2","fileCount":0}
+[2025-09-23T03:19:36.209Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-23T03:19:36.209Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer2","ip":"localhost","restPort":3002}
+[2025-09-23T03:19:36.210Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:19:36 +0000] "POST /register HTTP/1.1" 201 225 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-23T03:21:19.586Z] [directory-service] [DEBUG] File index updated | {"peerId":"peer3","fileCount":0}
+[2025-09-23T03:21:19.587Z] [directory-service] [DEBUG] Registry saved successfully
+[2025-09-23T03:21:19.587Z] [directory-service] [INFO] Peer registrado exitosamente | {"peerId":"peer3","ip":"localhost","restPort":3003}
+[2025-09-23T03:21:19.588Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:21:19 +0000] "POST /register HTTP/1.1" 201 225 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-23T03:22:08.613Z] [directory-service] [DEBUG] Lista de peers obtenida | {"count":3}
+[2025-09-23T03:22:08.614Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:22:08 +0000] "GET /peers HTTP/1.1" 200 519 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-23T03:22:19.421Z] [directory-service] [INFO] File search completed | {"searchTerm":"sample1.txt","resultCount":1}
+[2025-09-23T03:22:19.421Z] [directory-service] [INFO] Searching files | {"filename":"sample1.txt"}
+[2025-09-23T03:22:19.423Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:22:19 +0000] "GET /search/sample1.txt HTTP/1.1" 200 176 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-23T03:22:26.049Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:22:26 +0000] "GET /api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:22:26.064Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:22:26 +0000] "GET /api-docs/swagger-ui.css HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:22:26.066Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:22:26 +0000] "GET /api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:22:26.068Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:22:26 +0000] "GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:22:26.069Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:22:26 +0000] "GET /api-docs/swagger-ui-init.js HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:22:26.265Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:22:26 +0000] "GET /api-docs/favicon-32x32.png HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:22:31.954Z] [directory-service] [INFO] Retrieved all files | {"fileCount":3}
+[2025-09-23T03:22:31.955Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:22:31 +0000] "GET /files HTTP/1.1" 200 420 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-23T03:22:42.565Z] [directory-service] [INFO] Retrieved files by peer | {"peerId":"peer2","fileCount":0}
+[2025-09-23T03:22:42.566Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:22:42 +0000] "GET /files/peer/peer2 HTTP/1.1" 200 54 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-23T03:22:53.344Z] [directory-service] [INFO] File statistics generated | {"totalFiles":3,"totalReplicas":3,"averageReplicas":1,"mostReplicated":[{"filename":"sample1.txt","replicaCount":1},{"filename":"sample2.txt","replicaCount":1},{"filename":"sample3.txt","replicaCount":1}],"singleReplicaCount":3,"singleReplicaFiles":["sample1.txt","sample2.txt","sample3.txt"]}
+[2025-09-23T03:22:53.345Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:22:53 +0000] "GET /stats HTTP/1.1" 200 318 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-23T03:23:12.770Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:23:12 +0000] "GET /api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:23:12.880Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:23:12 +0000] "GET /api-docs/swagger-ui.css HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:23:12.883Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:23:12 +0000] "GET /api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:23:12.884Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:23:12 +0000] "GET /api-docs/swagger-ui-init.js HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:23:12.885Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:23:12 +0000] "GET /api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"
+[2025-09-23T03:23:19.294Z] [directory-service] [INFO] 127.0.0.1 - - [23/Sep/2025:03:23:19 +0000] "GET /health HTTP/1.1" 200 143 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 OPR/121.0.0.0"

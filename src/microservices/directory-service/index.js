@@ -3,11 +3,13 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const path = require('path');
+const swaggerUi = require('swagger-ui-express');
 
 const ConfigLoader = require('../../utils/config-loader');
 const Logger = require('../../utils/logger');
 const RegistryService = require('./registry.service');
 const FileIndexService = require('./file-index.service');
+const swaggerSpec = require('./swagger.config');
 
 class DirectoryService {
     constructor() {
@@ -84,6 +86,9 @@ class DirectoryService {
         this.app.use(express.json({ limit: '10mb' }));
         this.app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
+        // Swagger UI middleware
+        this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+        
         // Request timing middleware
         this.app.use((req, res, next) => {
             req.startTime = Date.now();
@@ -95,7 +100,32 @@ class DirectoryService {
      * Setup routes
      */
     setupRoutes() {
-        // Health check endpoint
+        /**
+         * @swagger
+         * /health:
+         *   get:
+         *     summary: Check the health status of the service
+         *     tags: [Health]
+         *     responses:
+         *       200:
+         *         description: Service is healthy
+         *         content:
+         *           application/json:
+         *             schema:
+         *               type: object
+         *               properties:
+         *                 status:
+         *                   type: string
+         *                   example: healthy
+         *                 service:
+         *                   type: string
+         *                   example: directory-service
+         *                 timestamp:
+         *                   type: string
+         *                   format: date-time
+         *                 stats:
+         *                   type: object
+         */
         this.app.get('/health', (req, res) => {
             const stats = this.registryService.getStats();
             res.json({
@@ -114,7 +144,44 @@ class DirectoryService {
             });
         });
 
-        // Registry routes
+        /**
+         * @swagger
+         * /register:
+         *   post:
+         *     summary: Register a new peer in the network
+         *     tags: [Peers]
+         *     requestBody:
+         *       required: true
+         *       content:
+         *         application/json:
+         *           schema:
+         *             type: object
+         *             required:
+         *               - peerId
+         *               - ip
+         *               - restPort
+         *               - grpcPort
+         *             properties:
+         *               peerId:
+         *                 type: string
+         *                 description: Unique identifier for the peer
+         *               ip:
+         *                 type: string
+         *                 description: IP address of the peer
+         *               restPort:
+         *                 type: number
+         *                 description: REST API port
+         *               grpcPort:
+         *                 type: number
+         *                 description: gRPC port
+         *     responses:
+         *       201:
+         *         description: Peer successfully registered
+         *       400:
+         *         description: Invalid request body
+         *       500:
+         *         description: Internal server error
+         */
         this.app.post('/register', async (req, res) => {
             try {
                 const result = await this.registryService.registerPeer(req.body);
@@ -159,7 +226,41 @@ class DirectoryService {
             }
         });
 
-        // File search routes
+        /**
+         * @swagger
+         * /search/{filename}:
+         *   get:
+         *     summary: Search for a file across all peers
+         *     tags: [Files]
+         *     parameters:
+         *       - in: path
+         *         name: filename
+         *         required: true
+         *         schema:
+         *           type: string
+         *         description: Name of the file to search for
+         *     responses:
+         *       200:
+         *         description: File search results
+         *         content:
+         *           application/json:
+         *             schema:
+         *               type: object
+         *               properties:
+         *                 success:
+         *                   type: boolean
+         *                 peers:
+         *                   type: array
+         *                   items:
+         *                     type: object
+         *                     properties:
+         *                       peerId:
+         *                         type: string
+         *                       url:
+         *                         type: string
+         *       500:
+         *         description: Internal server error
+         */
         this.app.get('/search/:filename', async (req, res) => {
             try {
                 const { filename } = req.params;

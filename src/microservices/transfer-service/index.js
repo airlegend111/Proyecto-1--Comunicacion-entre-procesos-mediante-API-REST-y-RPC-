@@ -4,11 +4,13 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const multer = require('multer');
 const path = require('path');
+const swaggerUi = require('swagger-ui-express');
 
 const ConfigLoader = require('../../utils/config-loader');
 const Logger = require('../../utils/logger');
 const UploadService = require('./upload.service');
 const DownloadService = require('./download.service');
+const swaggerSpec = require('./swagger.config');
 
 class TransferService {
     constructor() {
@@ -108,6 +110,9 @@ class TransferService {
         this.app.use(express.json({ limit: '10mb' }));
         this.app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
+        // Swagger UI middleware
+        this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
         // Request timing middleware
         this.app.use((req, res, next) => {
             req.startTime = Date.now();
@@ -143,7 +148,50 @@ class TransferService {
             });
         });
 
-        // Download file
+        /**
+         * @swagger
+         * /download/{filename}:
+         *   get:
+         *     summary: Download a file
+         *     tags: [Files]
+         *     parameters:
+         *       - in: path
+         *         name: filename
+         *         required: true
+         *         schema:
+         *           type: string
+         *         description: The name of the file to download
+         *       - in: query
+         *         name: includeContent
+         *         schema:
+         *           type: boolean
+         *           default: true
+         *         description: Whether to include file content in response
+         *       - in: query
+         *         name: includeMetadata
+         *         schema:
+         *           type: boolean
+         *           default: true
+         *         description: Whether to include file metadata
+         *       - in: query
+         *         name: validateHash
+         *         schema:
+         *           type: boolean
+         *           default: false
+         *         description: Whether to validate file hash
+         *     responses:
+         *       200:
+         *         description: File downloaded successfully
+         *         content:
+         *           application/octet-stream:
+         *             schema:
+         *               type: string
+         *               format: binary
+         *       404:
+         *         description: File not found
+         *       500:
+         *         description: Internal server error
+         */
         this.app.get('/download/:filename', async (req, res) => {
             try {
                 const { filename } = req.params;
@@ -203,7 +251,35 @@ class TransferService {
             }
         });
 
-        // Upload file
+        /**
+         * @swagger
+         * /upload:
+         *   post:
+         *     summary: Upload a single file
+         *     tags: [Files]
+         *     consumes:
+         *       - multipart/form-data
+         *     requestBody:
+         *       required: true
+         *       content:
+         *         multipart/form-data:
+         *           schema:
+         *             type: object
+         *             properties:
+         *               file:
+         *                 type: string
+         *                 format: binary
+         *               overwrite:
+         *                 type: boolean
+         *                 default: false
+         *     responses:
+         *       201:
+         *         description: File uploaded successfully
+         *       400:
+         *         description: No file provided or invalid request
+         *       500:
+         *         description: Upload failed
+         */
         this.app.post('/upload', this.upload.single('file'), async (req, res) => {
             try {
                 if (!req.file) {
