@@ -75,6 +75,19 @@ class DirectoryServer {
          *       200:
          *         description: Estado actual del servidor
          */
+        this.app.get('/', (req, res) => {
+            res.send('Servidor maestro activo');
+        });
+
+        /**
+         * @swagger
+         * /health:
+         *   get:
+         *     summary: Verificar estado del servidor de directorio
+         *     responses:
+         *       200:
+         *         description: Estado actual del servidor
+         */
         this.app.get('/health', (req, res) => {
             res.json({
                 status: 'ok',

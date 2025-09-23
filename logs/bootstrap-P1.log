@@ -298,3 +298,65 @@
 [2025-09-23T06:13:24.307Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:13:24.306Z"},"headers":{}}
 [2025-09-23T06:13:24.312Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
 [2025-09-23T06:13:24.312Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T15:16:19.317Z] [bootstrap-P1] [INFO] Bootstrap service initialized | {"peerId":"P1","restPort":9001,"directoryServer":"http://localhost:9000"}
+[2025-09-23T15:16:21.352Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:16:21.353Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:16:21.400Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:16:21.401Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:16:21.403Z] [bootstrap-P1] [INFO] Starting periodic registration updates | {"interval":30000}
+[2025-09-23T15:16:51.407Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:16:51.408Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:16:51.442Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:16:51.442Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:17:21.418Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:17:21.419Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:17:21.453Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:17:21.454Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:17:51.419Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:17:51.419Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:17:51.435Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:17:51.435Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:18:21.422Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:18:21.423Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:18:21.441Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:18:21.442Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:18:51.428Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:18:51.429Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:18:51.450Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:18:51.451Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:19:21.438Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:19:21.436Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:19:21.533Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:19:21.532Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:19:51.441Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:19:51.442Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:19:51.457Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:19:51.457Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:20:21.447Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:20:21.447Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:20:21.463Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:20:21.464Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:20:51.459Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:20:51.461Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:20:51.482Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:20:51.484Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:21:21.460Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:21:21.461Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:21:21.480Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:21:21.481Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:21:51.473Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:21:51.474Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:21:51.504Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:21:51.504Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:22:21.482Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:22:21.483Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:22:21.497Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:22:21.498Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:22:51.486Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:22:51.487Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:22:51.512Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:22:51.513Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T15:23:21.501Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T15:23:21.502Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T15:23:21.537Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Error"}
+[2025-09-23T15:23:21.539Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}

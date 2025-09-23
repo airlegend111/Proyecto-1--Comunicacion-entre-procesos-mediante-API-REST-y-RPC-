@@ -448,3 +448,18 @@
 [2025-09-23T06:12:24.306Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
 [2025-09-23T06:12:54.309Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
 [2025-09-23T06:13:24.311Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T15:23:50.280Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T15:35:27.857Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T15:38:32.590Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T15:39:28.469Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T15:39:53.087Z] [directory-service] [INFO] Peer registered successfully | {"peer":"string","fileCount":1}
+[2025-09-23T15:44:59.322Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T15:45:22.869Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T15:45:36.595Z] [directory-service] [INFO] Peer registered successfully | {"peer":"P1","fileCount":1}
+[2025-09-23T15:46:58.123Z] [directory-service] [INFO] Peer registered successfully | {"peer":"peer2","fileCount":1}
+[2025-09-23T15:51:19.763Z] [directory-service] [INFO] Peer registered successfully | {"peer":"P2","fileCount":1}
+[2025-09-23T15:51:32.927Z] [directory-service] [INFO] Peer registered successfully | {"peer":"P3","fileCount":1}
+[2025-09-23T15:56:00.414Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T15:56:46.481Z] [directory-service] [INFO] Peer registered successfully | {"peer":"P1","fileCount":1}
+[2025-09-23T15:56:54.039Z] [directory-service] [INFO] Peer registered successfully | {"peer":"P2","fileCount":1}
+[2025-09-23T15:56:59.742Z] [directory-service] [INFO] Peer registered successfully | {"peer":"P3","fileCount":1}
