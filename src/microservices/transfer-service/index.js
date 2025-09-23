@@ -4,6 +4,8 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const multer = require('multer');
 const path = require('path');
+const fs = require('fs');
+const fsp = fs.promises;
 const swaggerUi = require('swagger-ui-express');
 
 const ConfigLoader = require('../../utils/config-loader');
@@ -30,7 +32,8 @@ class TransferService {
         try {
             // Load configuration
             const configLoader = new ConfigLoader();
-            this.config = await configLoader.loadConfig('./config/peer1.json'); // Default to peer1
+            const configPath = process.argv[2] || './config/peer1.json';
+            this.config = await configLoader.loadConfig(configPath);
             
             // Initialize logger
             this.logger = new Logger('transfer-service');
@@ -70,7 +73,22 @@ class TransferService {
      * Setup multer for file uploads
      */
     setupMulter() {
-        const storage = multer.memoryStorage();
+        // Asegurarse de que el directorio compartido exista
+        const sharedDir = path.resolve(this.config.sharedDirectory);
+        if (!fs.existsSync(sharedDir)) {
+            fs.mkdirSync(sharedDir, { recursive: true });
+        }
+
+        const storage = multer.diskStorage({
+            destination: (req, file, cb) => {
+                cb(null, sharedDir);
+            },
+            filename: (req, file, cb) => {
+                // Asegurarse de que el nombre del archivo sea seguro
+                const safeFilename = path.basename(file.originalname).replace(/[^a-zA-Z0-9.-]/g, '_');
+                cb(null, safeFilename);
+            }
+        });
         
         this.upload = multer({
             storage: storage,
@@ -79,8 +97,14 @@ class TransferService {
                 files: 10 // Maximum 10 files per request
             },
             fileFilter: (req, file, cb) => {
-                // Allow all file types for now, validation is done in upload service
-                cb(null, true);
+                const ext = path.extname(file.originalname).toLowerCase();
+                const allowedExts = ['.txt', '.js', '.json', '.md', '.log', '.csv', '.xml', '.html', '.css'];
+                
+                if (allowedExts.includes(ext)) {
+                    cb(null, true);
+                } else {
+                    cb(new Error('File type not allowed'));
+                }
             }
         });
     }
@@ -219,25 +243,36 @@ class TransferService {
                 const result = await this.downloadService.downloadFile(filename, options);
 
                 if (result.success) {
-                    // Set appropriate headers
-                    res.set({
-                        'Content-Type': 'application/octet-stream',
-                        'Content-Disposition': `attachment; filename="${filename}"`,
-                        'Content-Length': result.size.toString()
-                    });
-
-                    if (range) {
+                    const filePath = path.join(this.config.sharedDirectory, filename);
+                    
+                    // Verificar si el archivo existe
+                    try {
+                        await fs.promises.access(filePath);
+                        
+                        // Set appropriate headers
                         res.set({
-                            'Content-Range': `bytes ${range.start}-${range.end || result.size - 1}/${result.size}`,
-                            'Accept-Ranges': 'bytes'
+                            'Content-Type': 'application/octet-stream',
+                            'Content-Disposition': `attachment; filename="${filename}"`,
+                            'Content-Length': result.size.toString()
                         });
-                        res.status(206); // Partial Content
-                    }
 
-                    if (result.content) {
-                        res.send(result.content);
-                    } else {
-                        res.json(result);
+                        if (range) {
+                            res.set({
+                                'Content-Range': `bytes ${range.start}-${range.end || result.size - 1}/${result.size}`,
+                                'Accept-Ranges': 'bytes'
+                            });
+                            res.status(206); // Partial Content
+                        }
+
+                        // Enviar el archivo como stream
+                        const fileStream = fs.createReadStream(filePath);
+                        fileStream.pipe(res);
+                    } catch (error) {
+                        res.status(404).json({
+                            success: false,
+                            message: `File ${filename} not found`,
+                            error: error.message
+                        });
                     }
                 } else {
                     res.status(404).json(result);
@@ -291,9 +326,12 @@ class TransferService {
 
                 const { overwrite = 'false' } = req.body;
                 
+                // Leer el archivo que multer guardó
+                const fileContent = await fsp.readFile(req.file.path);
+                
                 const fileData = {
-                    filename: req.file.originalname,
-                    content: req.file.buffer,
+                    filename: req.file.filename,
+                    content: fileContent,
                     mimeType: req.file.mimetype
                 };
 

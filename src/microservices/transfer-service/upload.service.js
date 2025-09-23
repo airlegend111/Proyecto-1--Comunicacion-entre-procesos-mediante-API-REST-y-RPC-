@@ -1,14 +1,20 @@
-const fs = require('fs').promises;
+const fs = require('fs');
+const fsp = fs.promises;
 const path = require('path');
 const crypto = require('crypto');
 
 class UploadService {
     constructor(logger, sharedDirectory) {
         this.logger = logger;
-        this.sharedDirectory = sharedDirectory;
+        this.sharedDirectory = path.resolve(sharedDirectory); // Convertir a ruta absoluta
         this.uploadQueue = new Map();
         this.maxFileSize = 100 * 1024 * 1024; // 100MB
         this.allowedExtensions = ['.txt', '.js', '.json', '.md', '.log', '.csv', '.xml', '.html', '.css'];
+        
+        // Asegurarse de que el directorio existe
+        if (!fs.existsSync(this.sharedDirectory)) {
+            fs.mkdirSync(this.sharedDirectory, { recursive: true });
+        }
     }
 
     /**

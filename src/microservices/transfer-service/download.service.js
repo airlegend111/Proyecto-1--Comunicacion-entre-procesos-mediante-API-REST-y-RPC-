@@ -1,14 +1,20 @@
-const fs = require('fs').promises;
+const fs = require('fs');
+const fsp = fs.promises;
 const path = require('path');
 const crypto = require('crypto');
 
 class DownloadService {
     constructor(logger, sharedDirectory) {
         this.logger = logger;
-        this.sharedDirectory = sharedDirectory;
+        this.sharedDirectory = path.resolve(sharedDirectory); // Convertir a ruta absoluta
         this.downloadCache = new Map();
         this.maxCacheSize = 100; // Maximum number of files in cache
         this.cacheTimeout = 5 * 60 * 1000; // 5 minutes
+        
+        // Asegurarse de que el directorio existe
+        if (!fs.existsSync(this.sharedDirectory)) {
+            fs.mkdirSync(this.sharedDirectory, { recursive: true });
+        }
     }
 
     /**

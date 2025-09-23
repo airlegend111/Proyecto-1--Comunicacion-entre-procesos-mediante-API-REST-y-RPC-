@@ -1,0 +1,6 @@
+[2025-09-23T03:50:54.168Z] [p2p-client-peer1] [INFO] P2P client initialized | {"peerId":"peer1","directoryServer":"http://directoryServer:4000"}
+[2025-09-23T03:52:46.949Z] [p2p-client-peer1] [INFO] P2P client initialized | {"peerId":"peer1","directoryServer":"http://localhost:4000"}
+[2025-09-23T03:56:53.271Z] [p2p-client-peer1] [INFO] P2P client initialized | {"peerId":"peer1","directoryServer":"http://localhost:4000"}
+[2025-09-23T03:58:56.348Z] [p2p-client-peer1] [INFO] P2P client initialized | {"peerId":"peer1","directoryServer":"http://localhost:4000"}
+[2025-09-23T03:58:56.358Z] [p2p-client-peer1] [DEBUG] Making GET request to http://localhost:4000/health | {"data":null,"headers":{}}
+[2025-09-23T03:58:56.358Z] [p2p-client-peer1] [INFO] Connecting to P2P network...

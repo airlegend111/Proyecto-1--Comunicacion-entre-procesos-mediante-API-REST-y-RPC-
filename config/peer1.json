@@ -4,7 +4,7 @@
   "restPort": 3001,
   "grpcPort": 50051,
   "sharedDirectory": "./shared-files/peer1",
-  "friendPrimary": "http://peer2:3002",
-  "friendBackup": "http://peer3:3003",
-  "directoryServer": "http://directoryServer:4000"
+  "friendPrimary": "http://localhost:3002",
+  "friendBackup": "http://localhost:3003",
+  "directoryServer": "http://localhost:4000"
 }
