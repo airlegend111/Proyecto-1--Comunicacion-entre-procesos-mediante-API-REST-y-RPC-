@@ -7,7 +7,7 @@ services:
       dockerfile: docker/Dockerfile
     command: ["node", "src/microservices/directory-service/index.js", "--config", "./config/directory-server.json"]
     ports:
-      - "4000:4000"
+      - "9000:9000"
     volumes:
       - ../config:/app/config
       - ../shared-files:/app/shared-files
@@ -18,7 +18,7 @@ services:
       dockerfile: docker/Dockerfile
     command: ["node", "src/server/p-servidor.js", "--config", "./config/peer1.json"]
     ports:
-      - "3001:3001"
+      - "9001:9001"
     volumes:
       - ../config:/app/config
       - ../shared-files:/app/shared-files
@@ -31,7 +31,7 @@ services:
       dockerfile: docker/Dockerfile
     command: ["node", "src/server/p-servidor.js", "--config", "./config/peer2.json"]
     ports:
-      - "3002:3002"
+      - "9003:9003"
     volumes:
       - ../config:/app/config
       - ../shared-files:/app/shared-files
@@ -44,7 +44,7 @@ services:
       dockerfile: docker/Dockerfile
     command: ["node", "src/server/p-servidor.js", "--config", "./config/peer3.json"]
     ports:
-      - "3003:3003"
+      - "9005:9005"
     volumes:
       - ../config:/app/config
       - ../shared-files:/app/shared-files
