@@ -400,3 +400,51 @@
 [2025-09-23T04:00:09.124Z] [directory-service] [INFO] Servicio de directorio inicializado exitosamente | {"port":4000,"registryFile":"./shared-files/registry.json"}
 [2025-09-23T04:00:09.140Z] [directory-service] [INFO] Servicio de directorio iniciado | {"port":4000,"ip":"0.0.0.0","url":"http://0.0.0.0:4000"}
 [2025-09-23T04:00:09.143Z] [directory-service] [INFO] Registry loaded successfully | {"peerCount":3,"fileCount":3}
+[2025-09-23T04:45:07.833Z] [directory-service] [INFO] Servicio de directorio iniciado | {"port":9000,"ip":"0.0.0.0","url":"http://0.0.0.0:9000"}
+[2025-09-23T04:50:11.976Z] [directory-service] [INFO] Servicio de directorio iniciado | {"port":9000,"url":"http://localhost:9000"}
+[2025-09-23T04:54:33.400Z] [directory-service] [INFO] Servicio de directorio iniciado | {"port":9000,"url":"http://localhost:9000"}
+[2025-09-23T04:55:53.447Z] [directory-service] [INFO] Servicio de directorio iniciado | {"port":9000,"url":"http://localhost:9000"}
+[2025-09-23T04:57:04.231Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"0.0.0.0","port":9000,"url":"http://localhost:9000"}
+[2025-09-23T04:57:36.230Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"0.0.0.0","port":9000,"url":"http://localhost:9000"}
+[2025-09-23T04:59:03.896Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"0.0.0.0","port":9000,"url":"http://localhost:9000"}
+[2025-09-23T04:59:45.600Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"0.0.0.0","port":9000,"url":"http://localhost:9000"}
+[2025-09-23T05:00:42.931Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"0.0.0.0","port":9000,"url":"http://localhost:9000"}
+[2025-09-23T05:01:58.084Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"0.0.0.0","port":9000,"url":"http://localhost:9000"}
+[2025-09-23T05:07:12.822Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T05:09:32.344Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T05:10:05.868Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T05:10:51.863Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T05:15:23.555Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T05:15:38.895Z] [directory-service] [INFO] Peer registered successfully | {"peer":"http://localhost:8001","fileCount":2}
+[2025-09-23T05:15:56.325Z] [directory-service] [INFO] Peer registered successfully | {"peer":"http://localhost:8002","fileCount":2}
+[2025-09-23T05:15:56.407Z] [directory-service] [INFO] Peer registered successfully | {"peer":"http://localhost:8003","fileCount":1}
+[2025-09-23T05:33:45.250Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T05:59:27.099Z] [directory-service] [INFO] Servicio de directorio iniciado | {"ip":"127.0.0.1","port":9000,"url":"http://127.0.0.1:9000"}
+[2025-09-23T05:59:54.079Z] [directory-service] [INFO] Peer registered successfully | {"peer":"P1","fileCount":1}
+[2025-09-23T06:00:24.113Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:00:54.109Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:01:24.115Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:01:54.133Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:02:24.142Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:02:54.162Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:03:24.165Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:03:54.185Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:04:24.191Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:04:54.201Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:05:24.209Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:05:54.219Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:06:24.229Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:06:54.234Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:07:24.242Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:07:54.248Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:08:24.254Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:08:54.271Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:09:24.282Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:09:54.276Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:10:24.276Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:10:54.287Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:11:24.289Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:11:54.300Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:12:24.306Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:12:54.309Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}
+[2025-09-23T06:13:24.311Z] [directory-service] [INFO] Peer registered successfully | {"fileCount":1}

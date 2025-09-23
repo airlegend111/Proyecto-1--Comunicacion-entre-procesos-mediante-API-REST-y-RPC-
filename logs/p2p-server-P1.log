@@ -1,0 +1,776 @@
+[2025-09-23T05:40:47.187Z] [p2p-server-P1] [INFO] Servidor P2P inicializado exitosamente | {"peerId":"P1","restPort":9001,"grpcPort":9002,"sharedDirectory":"./shared-files/peer1"}
+[2025-09-23T05:40:47.201Z] [p2p-server-P1] [INFO] Servidor P2P iniciado | {"port":9001,"ip":"0.0.0.0","url":"http://0.0.0.0:9001"}
+[2025-09-23T05:40:49.217Z] [p2p-server-P1] [INFO] Starting periodic health checks | {"interval":30000}
+[2025-09-23T05:41:19.236Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:41:19.237Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:41:19.238Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:41:19.240Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:41:19.243Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:41:19.243Z"}
+[2025-09-23T05:41:19.245Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:41:19.245Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":7,"lastCheck":"2025-09-23T05:41:19.245Z","error":"Error"}
+[2025-09-23T05:41:19.246Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T05:41:19.246Z","error":"Error"}
+[2025-09-23T05:41:19.246Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:41:19.249Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:41:19.249Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":13,"failedChecks":3}
+[2025-09-23T05:41:19.249Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":13,"lastCheck":"2025-09-23T05:41:19.249Z"}
+[2025-09-23T05:41:49.240Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:41:49.240Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:41:49.241Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:41:49.242Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:41:49.247Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:41:49.247Z"}
+[2025-09-23T05:41:49.248Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:41:49.248Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":7,"lastCheck":"2025-09-23T05:41:49.248Z","error":"Error"}
+[2025-09-23T05:41:49.248Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T05:41:49.248Z","error":"Error"}
+[2025-09-23T05:41:49.248Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:41:49.251Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":11,"lastCheck":"2025-09-23T05:41:49.251Z"}
+[2025-09-23T05:41:49.250Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:41:49.251Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":11,"failedChecks":3}
+[2025-09-23T05:42:19.254Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:42:19.255Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:42:19.255Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:42:19.256Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:42:19.260Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:42:19.260Z"}
+[2025-09-23T05:42:19.261Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:42:19.261Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":6,"lastCheck":"2025-09-23T05:42:19.261Z","error":"Error"}
+[2025-09-23T05:42:19.264Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:42:19.262Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:42:19.262Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T05:42:19.262Z","error":"Error"}
+[2025-09-23T05:42:19.264Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":10,"lastCheck":"2025-09-23T05:42:19.264Z"}
+[2025-09-23T05:42:19.264Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":10,"failedChecks":3}
+[2025-09-23T05:42:49.259Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:42:49.259Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:42:49.259Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:42:49.260Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:42:49.261Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:42:49.261Z"}
+[2025-09-23T05:42:49.263Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:42:49.263Z","error":"Error"}
+[2025-09-23T05:42:49.263Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:42:49.263Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:42:49.263Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":3,"lastCheck":"2025-09-23T05:42:49.263Z","error":"Error"}
+[2025-09-23T05:42:49.268Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":9,"lastCheck":"2025-09-23T05:42:49.268Z"}
+[2025-09-23T05:42:49.268Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:42:49.268Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":9,"failedChecks":3}
+[2025-09-23T05:43:19.270Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:43:19.270Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:43:19.271Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:43:19.271Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:43:19.273Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:43:19.273Z"}
+[2025-09-23T05:43:19.274Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:43:19.275Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:43:19.275Z","error":"Error"}
+[2025-09-23T05:43:19.275Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:43:19.274Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":3,"lastCheck":"2025-09-23T05:43:19.274Z","error":"Error"}
+[2025-09-23T05:43:19.277Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:43:19.277Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T05:43:19.277Z"}
+[2025-09-23T05:43:19.277Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":7,"failedChecks":3}
+[2025-09-23T05:43:49.275Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:43:49.276Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:43:49.277Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:43:49.277Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:43:49.281Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:43:49.280Z"}
+[2025-09-23T05:43:49.282Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:43:49.282Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":6,"lastCheck":"2025-09-23T05:43:49.282Z","error":"Error"}
+[2025-09-23T05:43:49.283Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:43:49.283Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T05:43:49.283Z","error":"Error"}
+[2025-09-23T05:43:49.285Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:43:49.285Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":10,"lastCheck":"2025-09-23T05:43:49.285Z"}
+[2025-09-23T05:43:49.285Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":10,"failedChecks":3}
+[2025-09-23T05:44:19.281Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:44:19.281Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:44:19.282Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:44:19.282Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:44:19.284Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:44:19.284Z"}
+[2025-09-23T05:44:19.285Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:44:19.286Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:44:19.286Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:44:19.286Z","error":"Error"}
+[2025-09-23T05:44:19.285Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:44:19.285Z","error":"Error"}
+[2025-09-23T05:44:19.287Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":6,"lastCheck":"2025-09-23T05:44:19.287Z"}
+[2025-09-23T05:44:19.287Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":6,"failedChecks":3}
+[2025-09-23T05:44:19.287Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:44:49.293Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:44:49.294Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:44:49.294Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:44:49.295Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:44:49.298Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:44:49.298Z"}
+[2025-09-23T05:44:49.298Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:44:49.299Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":5,"lastCheck":"2025-09-23T05:44:49.299Z","error":"Error"}
+[2025-09-23T05:44:49.299Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:44:49.299Z","error":"Error"}
+[2025-09-23T05:44:49.299Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:44:49.301Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:44:49.301Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":8,"lastCheck":"2025-09-23T05:44:49.301Z"}
+[2025-09-23T05:44:49.302Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":9,"failedChecks":3}
+[2025-09-23T05:45:19.301Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:45:19.301Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:45:19.302Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:45:19.303Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:45:19.305Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:45:19.305Z"}
+[2025-09-23T05:45:19.305Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:45:19.305Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":3,"lastCheck":"2025-09-23T05:45:19.305Z","error":"Error"}
+[2025-09-23T05:45:19.306Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:45:19.307Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:45:19.306Z","error":"Error"}
+[2025-09-23T05:45:19.308Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:45:19.308Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":7,"failedChecks":3}
+[2025-09-23T05:45:19.308Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T05:45:19.308Z"}
+[2025-09-23T05:45:28.793Z] [p2p-server-P1] [INFO] 127.0.0.1 - - [23/Sep/2025:05:45:28 +0000] "GET /download/sample1.txt HTTP/1.1" 404 79 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-23T05:45:49.305Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:45:49.305Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:45:49.306Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:45:49.307Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:45:49.310Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:45:49.309Z"}
+[2025-09-23T05:45:49.310Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:45:49.311Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:45:49.310Z","error":"Error"}
+[2025-09-23T05:45:49.311Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:45:49.311Z","error":"Error"}
+[2025-09-23T05:45:49.311Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:45:49.313Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:45:49.313Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":8,"lastCheck":"2025-09-23T05:45:49.313Z"}
+[2025-09-23T05:45:49.313Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":8,"failedChecks":3}
+[2025-09-23T05:46:19.319Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:46:19.320Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:46:19.320Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:46:19.321Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:46:19.323Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:46:19.323Z"}
+[2025-09-23T05:46:19.324Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:46:19.325Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:46:19.324Z","error":"Error"}
+[2025-09-23T05:46:19.325Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:46:19.327Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:46:19.325Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":5,"lastCheck":"2025-09-23T05:46:19.325Z","error":"Error"}
+[2025-09-23T05:46:19.327Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":8,"lastCheck":"2025-09-23T05:46:19.327Z"}
+[2025-09-23T05:46:19.328Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":8,"failedChecks":3}
+[2025-09-23T05:46:49.322Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:46:49.323Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:46:49.324Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:46:49.325Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:46:49.331Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:46:49.331Z"}
+[2025-09-23T05:46:49.334Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:46:49.334Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":10,"lastCheck":"2025-09-23T05:46:49.334Z","error":"Error"}
+[2025-09-23T05:46:49.336Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:46:49.339Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:46:49.340Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":18,"failedChecks":3}
+[2025-09-23T05:46:49.336Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":11,"lastCheck":"2025-09-23T05:46:49.336Z","error":"Error"}
+[2025-09-23T05:46:49.339Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":17,"lastCheck":"2025-09-23T05:46:49.339Z"}
+[2025-09-23T05:47:19.324Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:47:19.324Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:47:19.325Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:47:19.327Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:47:19.331Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:47:19.331Z"}
+[2025-09-23T05:47:19.332Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:47:19.332Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":7,"lastCheck":"2025-09-23T05:47:19.332Z","error":"Error"}
+[2025-09-23T05:47:19.333Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:47:19.333Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T05:47:19.333Z","error":"Error"}
+[2025-09-23T05:47:19.335Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":11,"lastCheck":"2025-09-23T05:47:19.335Z"}
+[2025-09-23T05:47:19.335Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:47:19.335Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":11,"failedChecks":3}
+[2025-09-23T05:47:49.338Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:47:49.338Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:47:49.339Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:47:49.339Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:47:49.342Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:47:49.341Z"}
+[2025-09-23T05:47:49.342Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:47:49.344Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":5,"lastCheck":"2025-09-23T05:47:49.344Z","error":"Error"}
+[2025-09-23T05:47:49.344Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:47:49.343Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":3,"lastCheck":"2025-09-23T05:47:49.342Z","error":"Error"}
+[2025-09-23T05:47:49.348Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":9,"lastCheck":"2025-09-23T05:47:49.347Z"}
+[2025-09-23T05:47:49.347Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:47:49.348Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":10,"failedChecks":3}
+[2025-09-23T05:48:19.347Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:48:19.347Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:48:19.348Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:48:19.348Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:48:19.350Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:48:19.350Z"}
+[2025-09-23T05:48:19.352Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:48:19.352Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:48:19.352Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":5,"lastCheck":"2025-09-23T05:48:19.352Z","error":"Error"}
+[2025-09-23T05:48:19.353Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":5,"lastCheck":"2025-09-23T05:48:19.353Z","error":"Error"}
+[2025-09-23T05:48:19.354Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:48:19.354Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":7,"failedChecks":3}
+[2025-09-23T05:48:19.354Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T05:48:19.354Z"}
+[2025-09-23T05:48:49.361Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:48:49.361Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:48:49.361Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:48:49.362Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:48:49.365Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:48:49.364Z"}
+[2025-09-23T05:48:49.365Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:48:49.366Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:48:49.365Z","error":"Error"}
+[2025-09-23T05:48:49.366Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:48:49.366Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:48:49.366Z","error":"Error"}
+[2025-09-23T05:48:49.368Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:48:49.368Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":7,"failedChecks":3}
+[2025-09-23T05:48:49.368Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T05:48:49.368Z"}
+[2025-09-23T05:49:19.365Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:49:19.366Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:49:19.366Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:49:19.367Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:49:19.368Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:49:19.368Z"}
+[2025-09-23T05:49:19.370Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:49:19.370Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:49:19.370Z","error":"Error"}
+[2025-09-23T05:49:19.370Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:49:19.370Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":3,"lastCheck":"2025-09-23T05:49:19.370Z","error":"Error"}
+[2025-09-23T05:49:19.372Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:49:19.372Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T05:49:19.372Z"}
+[2025-09-23T05:49:19.372Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":7,"failedChecks":3}
+[2025-09-23T05:49:49.380Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:49:49.380Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:49:49.380Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:49:49.381Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:49:49.383Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:49:49.383Z"}
+[2025-09-23T05:49:49.384Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:49:49.384Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:49:49.384Z","error":"Error"}
+[2025-09-23T05:49:49.386Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:49:49.386Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":5,"lastCheck":"2025-09-23T05:49:49.386Z","error":"Error"}
+[2025-09-23T05:49:49.387Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T05:49:49.387Z"}
+[2025-09-23T05:49:49.387Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:49:49.387Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":7,"failedChecks":3}
+[2025-09-23T05:49:50.036Z] [p2p-server-P1] [INFO] 127.0.0.1 - - [23/Sep/2025:05:49:50 +0000] "GET /download/sample1.txt HTTP/1.1" 404 79 "-" "Mozilla/5.0 (Windows NT; Windows NT 10.0; es-CO) WindowsPowerShell/5.1.26100.6584"
+[2025-09-23T05:50:19.392Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:50:19.392Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:50:19.393Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:50:19.392Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:50:19.395Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:50:19.395Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:50:19.395Z"}
+[2025-09-23T05:50:19.395Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":3,"lastCheck":"2025-09-23T05:50:19.395Z","error":"Error"}
+[2025-09-23T05:50:19.396Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:50:19.396Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:50:19.396Z","error":"Error"}
+[2025-09-23T05:50:19.398Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":5,"lastCheck":"2025-09-23T05:50:19.397Z"}
+[2025-09-23T05:50:19.397Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:50:19.398Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":6,"failedChecks":3}
+[2025-09-23T05:50:49.406Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:50:49.407Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:50:49.408Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:50:49.408Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:50:49.410Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:50:49.410Z"}
+[2025-09-23T05:50:49.411Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:50:49.412Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:50:49.411Z","error":"Error"}
+[2025-09-23T05:50:49.412Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:50:49.412Z","error":"Error"}
+[2025-09-23T05:50:49.412Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:50:49.414Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:50:49.414Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":8,"failedChecks":3}
+[2025-09-23T05:50:49.414Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":8,"lastCheck":"2025-09-23T05:50:49.414Z"}
+[2025-09-23T05:51:19.413Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:51:19.413Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:51:19.413Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:51:19.414Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:51:19.416Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:51:19.415Z"}
+[2025-09-23T05:51:19.417Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:51:19.417Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:51:19.417Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:51:19.417Z","error":"Error"}
+[2025-09-23T05:51:19.417Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":3,"lastCheck":"2025-09-23T05:51:19.417Z","error":"Error"}
+[2025-09-23T05:51:19.419Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:51:19.419Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":6,"lastCheck":"2025-09-23T05:51:19.419Z"}
+[2025-09-23T05:51:19.419Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":6,"failedChecks":3}
+[2025-09-23T05:51:49.426Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:51:49.427Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:51:49.427Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:51:49.428Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:51:49.429Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:51:49.429Z"}
+[2025-09-23T05:51:49.430Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:51:49.430Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":3,"lastCheck":"2025-09-23T05:51:49.430Z","error":"Error"}
+[2025-09-23T05:51:49.431Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:51:49.432Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":6,"lastCheck":"2025-09-23T05:51:49.432Z"}
+[2025-09-23T05:51:49.431Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:51:49.431Z","error":"Error"}
+[2025-09-23T05:51:49.432Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:51:49.433Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":6,"failedChecks":3}
+[2025-09-23T05:52:19.436Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:52:19.436Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:52:19.438Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:52:19.439Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:52:19.444Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:52:19.444Z"}
+[2025-09-23T05:52:19.449Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:52:19.450Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":10,"lastCheck":"2025-09-23T05:52:19.449Z","error":"Error"}
+[2025-09-23T05:52:19.448Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:52:19.449Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":11,"lastCheck":"2025-09-23T05:52:19.449Z","error":"Error"}
+[2025-09-23T05:52:19.451Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:52:19.451Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":15,"lastCheck":"2025-09-23T05:52:19.451Z"}
+[2025-09-23T05:52:19.451Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":15,"failedChecks":3}
+[2025-09-23T05:52:49.436Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:52:49.437Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:52:49.438Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:52:49.438Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:52:49.440Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:52:49.440Z"}
+[2025-09-23T05:52:49.442Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:52:49.442Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:52:49.442Z","error":"Error"}
+[2025-09-23T05:52:49.443Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:52:49.443Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":5,"lastCheck":"2025-09-23T05:52:49.443Z","error":"Error"}
+[2025-09-23T05:52:49.444Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:52:49.444Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T05:52:49.444Z"}
+[2025-09-23T05:52:49.444Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":7,"failedChecks":3}
+[2025-09-23T05:53:19.438Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:53:19.438Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:53:19.439Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:53:19.439Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:53:19.441Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:53:19.441Z"}
+[2025-09-23T05:53:19.442Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:53:19.442Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:53:19.442Z","error":"Error"}
+[2025-09-23T05:53:19.443Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:53:19.445Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:53:19.446Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":7,"failedChecks":3}
+[2025-09-23T05:53:19.445Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T05:53:19.445Z"}
+[2025-09-23T05:53:19.443Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:53:19.443Z","error":"Error"}
+[2025-09-23T05:53:49.453Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:53:49.454Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:53:49.455Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:53:49.456Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:53:49.462Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:53:49.461Z"}
+[2025-09-23T05:53:49.466Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":11,"lastCheck":"2025-09-23T05:53:49.466Z","error":"Error"}
+[2025-09-23T05:53:49.470Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:53:49.466Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:53:49.470Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":14,"lastCheck":"2025-09-23T05:53:49.470Z","error":"Error"}
+[2025-09-23T05:53:49.474Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:53:49.475Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":20,"lastCheck":"2025-09-23T05:53:49.474Z"}
+[2025-09-23T05:53:49.475Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":21,"failedChecks":3}
+[2025-09-23T05:54:19.466Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:54:19.467Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:54:19.468Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:54:19.469Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:54:19.472Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:54:19.471Z"}
+[2025-09-23T05:54:19.474Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:54:19.474Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":7,"lastCheck":"2025-09-23T05:54:19.474Z","error":"Error"}
+[2025-09-23T05:54:19.475Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:54:19.476Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T05:54:19.475Z","error":"Error"}
+[2025-09-23T05:54:19.478Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:54:19.478Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":12,"lastCheck":"2025-09-23T05:54:19.478Z"}
+[2025-09-23T05:54:19.478Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":12,"failedChecks":3}
+[2025-09-23T05:54:49.477Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:54:49.477Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:54:49.477Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:54:49.478Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:54:49.481Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:54:49.480Z"}
+[2025-09-23T05:54:49.482Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:54:49.482Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":5,"lastCheck":"2025-09-23T05:54:49.482Z","error":"Error"}
+[2025-09-23T05:54:49.484Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:54:49.484Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T05:54:49.484Z","error":"Error"}
+[2025-09-23T05:54:49.486Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":9,"lastCheck":"2025-09-23T05:54:49.486Z"}
+[2025-09-23T05:54:49.486Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:54:49.486Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":9,"failedChecks":3}
+[2025-09-23T05:55:19.480Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:55:19.481Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:55:19.481Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:55:19.482Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:55:19.484Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:55:19.484Z"}
+[2025-09-23T05:55:19.485Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:55:19.485Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:55:19.485Z","error":"Error"}
+[2025-09-23T05:55:19.486Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:55:19.486Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":5,"lastCheck":"2025-09-23T05:55:19.486Z","error":"Error"}
+[2025-09-23T05:55:19.487Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:55:19.487Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T05:55:19.487Z"}
+[2025-09-23T05:55:19.487Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":7,"failedChecks":3}
+[2025-09-23T05:55:49.496Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:55:49.496Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:55:49.497Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:55:49.498Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:55:49.500Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:55:49.500Z"}
+[2025-09-23T05:55:49.503Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:55:49.502Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":5,"lastCheck":"2025-09-23T05:55:49.502Z","error":"Error"}
+[2025-09-23T05:55:49.503Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T05:55:49.503Z","error":"Error"}
+[2025-09-23T05:55:49.501Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:55:49.504Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:55:49.505Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":9,"lastCheck":"2025-09-23T05:55:49.505Z"}
+[2025-09-23T05:55:49.505Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":9,"failedChecks":3}
+[2025-09-23T05:56:19.507Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:56:19.507Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:56:19.508Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:56:19.509Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:56:19.510Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:56:19.510Z"}
+[2025-09-23T05:56:19.511Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:56:19.512Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:56:19.511Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":3,"lastCheck":"2025-09-23T05:56:19.511Z","error":"Error"}
+[2025-09-23T05:56:19.513Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:56:19.512Z","error":"Error"}
+[2025-09-23T05:56:19.515Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:56:19.515Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":8,"lastCheck":"2025-09-23T05:56:19.515Z"}
+[2025-09-23T05:56:19.515Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":8,"failedChecks":3}
+[2025-09-23T05:56:49.509Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:56:49.509Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:56:49.509Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:56:49.510Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:56:49.512Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:56:49.512Z"}
+[2025-09-23T05:56:49.513Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:56:49.514Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:56:49.513Z","error":"Error"}
+[2025-09-23T05:56:49.514Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:56:49.516Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:56:49.514Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:56:49.514Z","error":"Error"}
+[2025-09-23T05:56:49.517Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T05:56:49.516Z"}
+[2025-09-23T05:56:49.517Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":8,"failedChecks":3}
+[2025-09-23T05:57:19.513Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:57:19.513Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:57:19.514Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:57:19.515Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:57:19.518Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:57:19.517Z"}
+[2025-09-23T05:57:19.518Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:57:19.518Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:57:19.518Z","error":"Error"}
+[2025-09-23T05:57:19.519Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:57:19.519Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":4,"lastCheck":"2025-09-23T05:57:19.519Z","error":"Error"}
+[2025-09-23T05:57:19.520Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:57:19.520Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T05:57:19.520Z"}
+[2025-09-23T05:57:19.520Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":7,"failedChecks":3}
+[2025-09-23T05:57:49.519Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:57:49.520Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:57:49.520Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:57:49.521Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:57:49.525Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:57:49.524Z"}
+[2025-09-23T05:57:49.526Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:57:49.527Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":7,"lastCheck":"2025-09-23T05:57:49.527Z","error":"Error"}
+[2025-09-23T05:57:49.527Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:57:49.528Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T05:57:49.527Z","error":"Error"}
+[2025-09-23T05:57:49.529Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:57:49.529Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":9,"lastCheck":"2025-09-23T05:57:49.529Z"}
+[2025-09-23T05:57:49.530Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":9,"failedChecks":3}
+[2025-09-23T05:58:19.522Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:58:19.523Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:58:19.524Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:58:19.526Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:58:19.529Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:58:19.529Z"}
+[2025-09-23T05:58:19.531Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":6,"lastCheck":"2025-09-23T05:58:19.530Z","error":"Error"}
+[2025-09-23T05:58:19.532Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:58:19.530Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:58:19.532Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":7,"lastCheck":"2025-09-23T05:58:19.532Z","error":"Error"}
+[2025-09-23T05:58:19.535Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":13,"lastCheck":"2025-09-23T05:58:19.535Z"}
+[2025-09-23T05:58:19.535Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:58:19.536Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":13,"failedChecks":3}
+[2025-09-23T05:58:49.524Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:58:49.524Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:58:49.525Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:58:49.525Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:58:49.528Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:58:49.528Z"}
+[2025-09-23T05:58:49.530Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:58:49.530Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":6,"lastCheck":"2025-09-23T05:58:49.530Z","error":"Error"}
+[2025-09-23T05:58:49.531Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T05:58:49.531Z","error":"Error"}
+[2025-09-23T05:58:49.531Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:58:49.532Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":8,"lastCheck":"2025-09-23T05:58:49.532Z"}
+[2025-09-23T05:58:49.532Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:58:49.532Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":8,"failedChecks":3}
+[2025-09-23T05:59:19.531Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T05:59:19.531Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:59:19.532Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T05:59:19.532Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T05:59:19.534Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T05:59:19.534Z"}
+[2025-09-23T05:59:19.538Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T05:59:19.536Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T05:59:19.537Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":4,"lastCheck":"2025-09-23T05:59:19.536Z","error":"Error"}
+[2025-09-23T05:59:19.538Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T05:59:19.538Z","error":"Error"}
+[2025-09-23T05:59:19.541Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"unhealthy","url":"http://localhost:9000","responseTime":10,"lastCheck":"2025-09-23T05:59:19.541Z"}
+[2025-09-23T05:59:19.541Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:59:19.541Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":10,"failedChecks":3}
+[2025-09-23T05:59:52.027Z] [p2p-server-P1] [INFO] Servidor P2P inicializado exitosamente | {"peerId":"P1","restPort":9001,"grpcPort":9002,"sharedDirectory":"./shared-files/peer1"}
+[2025-09-23T05:59:52.040Z] [p2p-server-P1] [INFO] Servidor P2P iniciado | {"port":9001,"ip":"0.0.0.0","url":"http://0.0.0.0:9001"}
+[2025-09-23T05:59:54.080Z] [p2p-server-P1] [INFO] Starting periodic health checks | {"interval":30000}
+[2025-09-23T06:00:24.096Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:00:24.097Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:00:24.100Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:00:24.102Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:00:24.107Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:00:24.107Z"}
+[2025-09-23T06:00:24.109Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:00:24.109Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":10,"lastCheck":"2025-09-23T06:00:24.109Z","error":"Error"}
+[2025-09-23T06:00:24.110Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":9,"lastCheck":"2025-09-23T06:00:24.110Z","error":"Error"}
+[2025-09-23T06:00:24.110Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:00:24.113Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:00:24.109Z"}}
+[2025-09-23T06:00:24.113Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":16,"lastCheck":"2025-09-23T06:00:24.113Z"}
+[2025-09-23T06:00:24.113Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":16,"failedChecks":2}
+[2025-09-23T06:00:54.100Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:00:54.100Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:00:54.101Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:00:54.102Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:00:54.107Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:00:54.107Z"}
+[2025-09-23T06:00:54.108Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:00:54.108Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":7,"lastCheck":"2025-09-23T06:00:54.108Z","error":"Error"}
+[2025-09-23T06:00:54.109Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:00:54.109Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":7,"lastCheck":"2025-09-23T06:00:54.109Z","error":"Error"}
+[2025-09-23T06:00:54.110Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:00:54.107Z"}}
+[2025-09-23T06:00:54.110Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":10,"lastCheck":"2025-09-23T06:00:54.110Z"}
+[2025-09-23T06:00:54.111Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":10,"failedChecks":2}
+[2025-09-23T06:01:24.108Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:01:24.108Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:01:24.109Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:01:24.109Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:01:24.112Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:01:24.112Z"}
+[2025-09-23T06:01:24.114Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:01:24.114Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":6,"lastCheck":"2025-09-23T06:01:24.114Z","error":"Error"}
+[2025-09-23T06:01:24.114Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:01:24.114Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":5,"lastCheck":"2025-09-23T06:01:24.114Z","error":"Error"}
+[2025-09-23T06:01:24.115Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T06:01:24.115Z"}
+[2025-09-23T06:01:24.115Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:01:24.113Z"}}
+[2025-09-23T06:01:24.116Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":8,"failedChecks":2}
+[2025-09-23T06:01:54.123Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:01:54.123Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:01:54.124Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:01:54.125Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:01:54.130Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:01:54.130Z"}
+[2025-09-23T06:01:54.131Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:01:54.131Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":8,"lastCheck":"2025-09-23T06:01:54.131Z","error":"Error"}
+[2025-09-23T06:01:54.132Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":7,"lastCheck":"2025-09-23T06:01:54.132Z","error":"Error"}
+[2025-09-23T06:01:54.133Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:01:54.131Z"}}
+[2025-09-23T06:01:54.134Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":10,"lastCheck":"2025-09-23T06:01:54.133Z"}
+[2025-09-23T06:01:54.132Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:01:54.134Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":11,"failedChecks":2}
+[2025-09-23T06:02:24.131Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:02:24.132Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:02:24.133Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:02:24.134Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:02:24.137Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:02:24.137Z"}
+[2025-09-23T06:02:24.139Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":6,"lastCheck":"2025-09-23T06:02:24.139Z","error":"Error"}
+[2025-09-23T06:02:24.139Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:02:24.140Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":7,"lastCheck":"2025-09-23T06:02:24.140Z","error":"Error"}
+[2025-09-23T06:02:24.140Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:02:24.142Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:02:24.138Z"}}
+[2025-09-23T06:02:24.142Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":10,"lastCheck":"2025-09-23T06:02:24.142Z"}
+[2025-09-23T06:02:24.142Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":10,"failedChecks":2}
+[2025-09-23T06:02:54.138Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:02:54.139Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:02:54.140Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:02:54.142Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:02:54.151Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:02:54.150Z"}
+[2025-09-23T06:02:54.155Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:02:54.156Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":16,"lastCheck":"2025-09-23T06:02:54.156Z","error":"Error"}
+[2025-09-23T06:02:54.159Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":18,"lastCheck":"2025-09-23T06:02:54.159Z","error":"Error"}
+[2025-09-23T06:02:54.162Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:02:54.154Z"}}
+[2025-09-23T06:02:54.162Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":23,"lastCheck":"2025-09-23T06:02:54.162Z"}
+[2025-09-23T06:02:54.158Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:02:54.164Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":24,"failedChecks":2}
+[2025-09-23T06:03:24.145Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:03:24.145Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:03:24.146Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:03:24.147Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:03:24.156Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:03:24.155Z"}
+[2025-09-23T06:03:24.160Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:03:24.160Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":14,"lastCheck":"2025-09-23T06:03:24.160Z","error":"Error"}
+[2025-09-23T06:03:24.163Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:03:24.163Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":16,"lastCheck":"2025-09-23T06:03:24.163Z","error":"Error"}
+[2025-09-23T06:03:24.166Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:03:24.159Z"}}
+[2025-09-23T06:03:24.166Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":21,"lastCheck":"2025-09-23T06:03:24.166Z"}
+[2025-09-23T06:03:24.166Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":21,"failedChecks":2}
+[2025-09-23T06:03:54.159Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:03:54.159Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:03:54.161Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:03:54.162Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:03:54.172Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:03:54.171Z"}
+[2025-09-23T06:03:54.177Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:03:54.178Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":17,"lastCheck":"2025-09-23T06:03:54.178Z","error":"Error"}
+[2025-09-23T06:03:54.181Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:03:54.182Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":20,"lastCheck":"2025-09-23T06:03:54.181Z","error":"Error"}
+[2025-09-23T06:03:54.184Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:03:54.176Z"}}
+[2025-09-23T06:03:54.185Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":26,"lastCheck":"2025-09-23T06:03:54.185Z"}
+[2025-09-23T06:03:54.186Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":26,"failedChecks":2}
+[2025-09-23T06:04:24.167Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:04:24.167Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:04:24.169Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:04:24.170Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:04:24.180Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:04:24.180Z"}
+[2025-09-23T06:04:24.187Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:04:24.185Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:04:24.186Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":16,"lastCheck":"2025-09-23T06:04:24.185Z","error":"Error"}
+[2025-09-23T06:04:24.188Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":18,"lastCheck":"2025-09-23T06:04:24.187Z","error":"Error"}
+[2025-09-23T06:04:24.190Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:04:24.184Z"}}
+[2025-09-23T06:04:24.191Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":24,"lastCheck":"2025-09-23T06:04:24.191Z"}
+[2025-09-23T06:04:24.192Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":24,"failedChecks":2}
+[2025-09-23T06:04:54.172Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:04:54.171Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:04:54.174Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:04:54.176Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:04:54.188Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:04:54.185Z"}
+[2025-09-23T06:04:54.195Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:04:54.195Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":22,"lastCheck":"2025-09-23T06:04:54.195Z","error":"Error"}
+[2025-09-23T06:04:54.196Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:04:54.197Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":22,"lastCheck":"2025-09-23T06:04:54.197Z","error":"Error"}
+[2025-09-23T06:04:54.201Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":30,"lastCheck":"2025-09-23T06:04:54.201Z"}
+[2025-09-23T06:04:54.201Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:04:54.194Z"}}
+[2025-09-23T06:04:54.201Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":30,"failedChecks":2}
+[2025-09-23T06:05:24.186Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:05:24.187Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:05:24.188Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:05:24.189Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:05:24.198Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:05:24.198Z"}
+[2025-09-23T06:05:24.203Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:05:24.204Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":15,"lastCheck":"2025-09-23T06:05:24.203Z","error":"Error"}
+[2025-09-23T06:05:24.206Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:05:24.207Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":17,"lastCheck":"2025-09-23T06:05:24.206Z","error":"Error"}
+[2025-09-23T06:05:24.210Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":24,"lastCheck":"2025-09-23T06:05:24.210Z"}
+[2025-09-23T06:05:24.211Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":24,"failedChecks":2}
+[2025-09-23T06:05:24.209Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:05:24.202Z"}}
+[2025-09-23T06:05:54.202Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:05:54.202Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:05:54.203Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:05:54.204Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:05:54.210Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:05:54.210Z"}
+[2025-09-23T06:05:54.215Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":12,"lastCheck":"2025-09-23T06:05:54.215Z","error":"Error"}
+[2025-09-23T06:05:54.217Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:05:54.215Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:05:54.217Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":13,"lastCheck":"2025-09-23T06:05:54.217Z","error":"Error"}
+[2025-09-23T06:05:54.220Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:05:54.214Z"}}
+[2025-09-23T06:05:54.221Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":18,"lastCheck":"2025-09-23T06:05:54.220Z"}
+[2025-09-23T06:05:54.222Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":19,"failedChecks":2}
+[2025-09-23T06:06:24.211Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:06:24.212Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:06:24.212Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:06:24.213Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:06:24.221Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:06:24.220Z"}
+[2025-09-23T06:06:24.223Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:06:24.224Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":11,"lastCheck":"2025-09-23T06:06:24.223Z","error":"Error"}
+[2025-09-23T06:06:24.225Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:06:24.226Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":13,"lastCheck":"2025-09-23T06:06:24.226Z","error":"Error"}
+[2025-09-23T06:06:24.230Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:06:24.222Z"}}
+[2025-09-23T06:06:24.231Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":19,"lastCheck":"2025-09-23T06:06:24.230Z"}
+[2025-09-23T06:06:24.232Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":20,"failedChecks":2}
+[2025-09-23T06:06:54.219Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:06:54.219Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:06:54.220Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:06:54.221Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:06:54.228Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:06:54.228Z"}
+[2025-09-23T06:06:54.230Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:06:54.231Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":10,"lastCheck":"2025-09-23T06:06:54.230Z","error":"Error"}
+[2025-09-23T06:06:54.232Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:06:54.235Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:06:54.230Z"}}
+[2025-09-23T06:06:54.233Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":11,"lastCheck":"2025-09-23T06:06:54.232Z","error":"Error"}
+[2025-09-23T06:06:54.236Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":17,"lastCheck":"2025-09-23T06:06:54.236Z"}
+[2025-09-23T06:06:54.237Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":17,"failedChecks":2}
+[2025-09-23T06:07:24.229Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:07:24.230Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:07:24.230Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:07:24.231Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:07:24.237Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:07:24.237Z"}
+[2025-09-23T06:07:24.239Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:07:24.239Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":9,"lastCheck":"2025-09-23T06:07:24.239Z","error":"Error"}
+[2025-09-23T06:07:24.240Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:07:24.241Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":9,"lastCheck":"2025-09-23T06:07:24.240Z","error":"Error"}
+[2025-09-23T06:07:24.242Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:07:24.239Z"}}
+[2025-09-23T06:07:24.242Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":13,"lastCheck":"2025-09-23T06:07:24.242Z"}
+[2025-09-23T06:07:24.243Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":13,"failedChecks":2}
+[2025-09-23T06:07:54.237Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:07:54.237Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:07:54.239Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:07:54.240Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:07:54.245Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:07:54.245Z"}
+[2025-09-23T06:07:54.246Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":8,"lastCheck":"2025-09-23T06:07:54.246Z","error":"Error"}
+[2025-09-23T06:07:54.246Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:07:54.247Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":7,"lastCheck":"2025-09-23T06:07:54.247Z","error":"Error"}
+[2025-09-23T06:07:54.247Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:07:54.248Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:07:54.246Z"}}
+[2025-09-23T06:07:54.248Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":11,"lastCheck":"2025-09-23T06:07:54.248Z"}
+[2025-09-23T06:07:54.248Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":11,"failedChecks":2}
+[2025-09-23T06:08:24.241Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:08:24.241Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:08:24.243Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:08:24.243Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:08:24.248Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:08:24.247Z"}
+[2025-09-23T06:08:24.254Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:08:24.257Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:08:24.255Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":13,"lastCheck":"2025-09-23T06:08:24.255Z","error":"Error"}
+[2025-09-23T06:08:24.258Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":14,"lastCheck":"2025-09-23T06:08:24.257Z","error":"Error"}
+[2025-09-23T06:08:24.263Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:08:24.256Z"}}
+[2025-09-23T06:08:24.264Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":22,"lastCheck":"2025-09-23T06:08:24.263Z"}
+[2025-09-23T06:08:24.264Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":23,"failedChecks":2}
+[2025-09-23T06:08:54.251Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:08:54.252Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:08:54.253Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:08:54.254Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:08:54.263Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:08:54.263Z"}
+[2025-09-23T06:08:54.266Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:08:54.267Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":13,"lastCheck":"2025-09-23T06:08:54.266Z","error":"Error"}
+[2025-09-23T06:08:54.269Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:08:54.270Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":15,"lastCheck":"2025-09-23T06:08:54.269Z","error":"Error"}
+[2025-09-23T06:08:54.271Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:08:54.265Z"}}
+[2025-09-23T06:08:54.272Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":20,"lastCheck":"2025-09-23T06:08:54.271Z"}
+[2025-09-23T06:08:54.272Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":21,"failedChecks":2}
+[2025-09-23T06:09:24.266Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:09:24.267Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:09:24.268Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:09:24.270Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:09:24.276Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:09:24.276Z"}
+[2025-09-23T06:09:24.279Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:09:24.279Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":11,"lastCheck":"2025-09-23T06:09:24.279Z","error":"Error"}
+[2025-09-23T06:09:24.281Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":11,"lastCheck":"2025-09-23T06:09:24.280Z","error":"Error"}
+[2025-09-23T06:09:24.280Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:09:24.283Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:09:24.278Z"}}
+[2025-09-23T06:09:24.284Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":17,"lastCheck":"2025-09-23T06:09:24.283Z"}
+[2025-09-23T06:09:24.285Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":19,"failedChecks":2}
+[2025-09-23T06:09:54.266Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:09:54.266Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:09:54.267Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:09:54.268Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:09:54.273Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:09:54.273Z"}
+[2025-09-23T06:09:54.274Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:09:54.275Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":7,"lastCheck":"2025-09-23T06:09:54.274Z","error":"Error"}
+[2025-09-23T06:09:54.275Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:09:54.276Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:09:54.274Z"}}
+[2025-09-23T06:09:54.275Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":7,"lastCheck":"2025-09-23T06:09:54.275Z","error":"Error"}
+[2025-09-23T06:09:54.276Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":10,"lastCheck":"2025-09-23T06:09:54.276Z"}
+[2025-09-23T06:09:54.276Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":10,"failedChecks":2}
+[2025-09-23T06:10:24.268Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:10:24.269Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:10:24.269Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:10:24.270Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:10:24.273Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:10:24.273Z"}
+[2025-09-23T06:10:24.274Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:10:24.275Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":5,"lastCheck":"2025-09-23T06:10:24.274Z","error":"Error"}
+[2025-09-23T06:10:24.275Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:10:24.275Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":5,"lastCheck":"2025-09-23T06:10:24.275Z","error":"Error"}
+[2025-09-23T06:10:24.276Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:10:24.274Z"}}
+[2025-09-23T06:10:24.277Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":7,"lastCheck":"2025-09-23T06:10:24.276Z"}
+[2025-09-23T06:10:24.277Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":8,"failedChecks":2}
+[2025-09-23T06:10:54.278Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:10:54.279Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:10:54.280Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:10:54.281Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:10:54.284Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:10:54.284Z"}
+[2025-09-23T06:10:54.285Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:10:54.285Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":5,"lastCheck":"2025-09-23T06:10:54.285Z","error":"Error"}
+[2025-09-23T06:10:54.286Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:10:54.287Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:10:54.285Z"}}
+[2025-09-23T06:10:54.287Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":8,"lastCheck":"2025-09-23T06:10:54.287Z"}
+[2025-09-23T06:10:54.287Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":8,"failedChecks":2}
+[2025-09-23T06:10:54.286Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":5,"lastCheck":"2025-09-23T06:10:54.286Z","error":"Error"}
+[2025-09-23T06:11:24.281Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:11:24.282Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:11:24.282Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:11:24.283Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:11:24.285Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:11:24.285Z"}
+[2025-09-23T06:11:24.287Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":5,"lastCheck":"2025-09-23T06:11:24.287Z","error":"Error"}
+[2025-09-23T06:11:24.288Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:11:24.286Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:11:24.288Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":5,"lastCheck":"2025-09-23T06:11:24.288Z","error":"Error"}
+[2025-09-23T06:11:24.289Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:11:24.286Z"}}
+[2025-09-23T06:11:24.290Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":8,"lastCheck":"2025-09-23T06:11:24.289Z"}
+[2025-09-23T06:11:24.290Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":9,"failedChecks":2}
+[2025-09-23T06:11:54.285Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:11:54.285Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:11:54.286Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:11:54.287Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:11:54.293Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:11:54.292Z"}
+[2025-09-23T06:11:54.298Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:11:54.296Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":10,"lastCheck":"2025-09-23T06:11:54.296Z","error":"Error"}
+[2025-09-23T06:11:54.296Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:11:54.298Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":11,"lastCheck":"2025-09-23T06:11:54.298Z","error":"Error"}
+[2025-09-23T06:11:54.299Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:11:54.296Z"}}
+[2025-09-23T06:11:54.300Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":15,"lastCheck":"2025-09-23T06:11:54.300Z"}
+[2025-09-23T06:11:54.300Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":15,"failedChecks":2}
+[2025-09-23T06:12:24.293Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:12:24.294Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:12:24.295Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:12:24.295Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:12:24.300Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:12:24.299Z"}
+[2025-09-23T06:12:24.302Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:12:24.303Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":7,"lastCheck":"2025-09-23T06:12:24.302Z","error":"Error"}
+[2025-09-23T06:12:24.305Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:12:24.305Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:12:24.302Z"}}
+[2025-09-23T06:12:24.305Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":10,"lastCheck":"2025-09-23T06:12:24.305Z","error":"Error"}
+[2025-09-23T06:12:24.306Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":12,"lastCheck":"2025-09-23T06:12:24.305Z"}
+[2025-09-23T06:12:24.306Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":13,"failedChecks":2}
+[2025-09-23T06:12:54.298Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:12:54.299Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:12:54.300Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:12:54.301Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:12:54.305Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:12:54.305Z"}
+[2025-09-23T06:12:54.306Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:12:54.306Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":6,"lastCheck":"2025-09-23T06:12:54.306Z","error":"Error"}
+[2025-09-23T06:12:54.308Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:12:54.308Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":8,"lastCheck":"2025-09-23T06:12:54.308Z","error":"Error"}
+[2025-09-23T06:12:54.309Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:12:54.306Z"}}
+[2025-09-23T06:12:54.309Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":11,"lastCheck":"2025-09-23T06:12:54.309Z"}
+[2025-09-23T06:12:54.309Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":11,"failedChecks":2}
+[2025-09-23T06:13:24.303Z] [p2p-server-P1] [INFO] Starting comprehensive health check
+[2025-09-23T06:13:24.303Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T06:13:24.304Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9003/ping | {"data":null,"headers":{}}
+[2025-09-23T06:13:24.305Z] [p2p-server-P1] [DEBUG] Making GET request to http://localhost:9005/ping | {"data":null,"headers":{}}
+[2025-09-23T06:13:24.308Z] [p2p-server-P1] [DEBUG] Self health check completed | {"status":"healthy","sharedDirectory":{"path":"./shared-files/peer1","exists":true,"readable":true},"restPort":9001,"grpcPort":9002,"lastCheck":"2025-09-23T06:13:24.308Z"}
+[2025-09-23T06:13:24.310Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9003/ping | {"error":"Error"}
+[2025-09-23T06:13:24.310Z] [p2p-server-P1] [DEBUG] Friend primary check completed | {"status":"offline","url":"http://localhost:9003","responseTime":6,"lastCheck":"2025-09-23T06:13:24.310Z","error":"Error"}
+[2025-09-23T06:13:24.310Z] [p2p-server-P1] [ERROR] Request failed: GET http://localhost:9005/ping | {"error":"Error"}
+[2025-09-23T06:13:24.310Z] [p2p-server-P1] [DEBUG] Friend backup check completed | {"status":"offline","url":"http://localhost:9005","responseTime":6,"lastCheck":"2025-09-23T06:13:24.310Z","error":"Error"}
+[2025-09-23T06:13:24.311Z] [p2p-server-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T06:13:24.309Z"}}
+[2025-09-23T06:13:24.311Z] [p2p-server-P1] [DEBUG] Directory server check completed | {"status":"healthy","url":"http://localhost:9000","responseTime":8,"lastCheck":"2025-09-23T06:13:24.311Z"}
+[2025-09-23T06:13:24.312Z] [p2p-server-P1] [INFO] Health check completed | {"overallHealth":"degraded","responseTime":8,"failedChecks":2}

@@ -20,7 +20,7 @@ class BootstrapService {
     async initialize(configPath) {
         try {
             // Load configuration
-            const configLoader = new ConfigLoader();
+            const configLoader = require('../../utils/config-loader');
             this.config = await configLoader.loadConfig(configPath);
             
             // Initialize logger
@@ -106,7 +106,7 @@ class BootstrapService {
             const files = await this.getCurrentFiles();
             
             const peerData = {
-                peerId: this.config.peerId,
+                peer: this.config.peerId,
                 ip: this.config.ip,
                 restPort: this.config.restPort,
                 grpcPort: this.config.grpcPort,

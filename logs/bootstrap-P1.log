@@ -1,0 +1,300 @@
+[2025-09-23T05:40:47.183Z] [bootstrap-P1] [INFO] Bootstrap service initialized | {"peerId":"P1","restPort":9001,"directoryServer":"http://localhost:9000"}
+[2025-09-23T05:40:49.197Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:40:49.198Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:40:49.216Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:40:49.216Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:40:49.216Z] [bootstrap-P1] [INFO] Starting periodic registration updates | {"interval":30000}
+[2025-09-23T05:41:19.232Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:41:19.233Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:41:19.247Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:41:19.248Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:41:49.239Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:41:49.239Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:41:49.249Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:41:49.249Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:42:19.252Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:42:19.253Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:42:19.263Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:42:19.263Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:42:49.257Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:42:49.258Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:42:49.265Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:42:49.266Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:43:19.268Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:43:19.268Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:43:19.276Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:43:19.276Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:43:49.273Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:43:49.274Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:43:49.284Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:43:49.284Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:44:19.280Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:44:19.280Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:44:19.287Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:44:19.287Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:44:49.291Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:44:49.292Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:44:49.300Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:44:49.300Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:45:19.300Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:45:19.300Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:45:19.307Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:45:19.307Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:45:49.304Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:45:49.304Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:45:49.312Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:45:49.313Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:46:19.318Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:46:19.318Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:46:19.326Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:46:19.326Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:46:49.320Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:46:49.320Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:46:49.339Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:46:49.339Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:47:19.321Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:47:19.322Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:47:19.334Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:47:19.334Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:47:49.337Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:47:49.337Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:47:49.346Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:47:49.347Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:48:19.345Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:48:19.345Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:48:19.353Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:48:19.353Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:48:49.359Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:48:49.359Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:48:49.367Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:48:49.367Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:49:19.364Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:49:19.364Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:49:19.371Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:49:19.371Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:49:49.379Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:49:49.379Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:49:49.386Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:49:49.387Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:50:19.391Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:50:19.391Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:50:19.397Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:50:19.397Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:50:49.405Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:50:49.405Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:50:49.413Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:50:49.413Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:51:19.412Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:51:19.412Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:51:19.418Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:51:19.418Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:51:49.425Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:51:49.426Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:51:49.432Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:51:49.432Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:52:19.435Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:52:19.435Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:52:19.450Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:52:19.451Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:52:49.434Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:52:49.434Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:52:49.441Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:52:49.442Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:53:19.437Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:53:19.437Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:53:19.444Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:53:19.444Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:53:49.451Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:53:49.452Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:53:49.472Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:53:49.472Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:54:19.464Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:54:19.465Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:54:19.477Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:54:19.477Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:54:49.475Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:54:49.475Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:54:49.485Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:54:49.485Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:55:19.479Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:55:19.480Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:55:19.486Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:55:19.487Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:55:49.494Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:55:49.495Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:55:49.504Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:55:49.504Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:56:19.506Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:56:19.506Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:56:19.514Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:56:19.514Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:56:49.508Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:56:49.508Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:56:49.515Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:56:49.515Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:57:19.512Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:57:19.512Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:57:19.519Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:57:19.519Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:57:49.517Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:57:49.518Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:57:49.528Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:57:49.529Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:58:19.520Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:58:19.520Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:58:19.534Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:58:19.534Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:58:49.521Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:58:49.521Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:58:49.531Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:58:49.531Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:59:19.530Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:59:19.530Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:59:19.540Z] [bootstrap-P1] [ERROR] Request failed: GET http://localhost:9000/health | {"error":"Request failed with status code 404","status":404,"data":"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /health</pre>\n</body>\n</html>\n"}
+[2025-09-23T05:59:19.540Z] [bootstrap-P1] [ERROR] Failed to connect to P2P network | {"error":"Directory server is not available","retryCount":0}
+[2025-09-23T05:59:52.024Z] [bootstrap-P1] [INFO] Bootstrap service initialized | {"peerId":"P1","restPort":9001,"directoryServer":"http://localhost:9000"}
+[2025-09-23T05:59:54.040Z] [bootstrap-P1] [INFO] Attempting to connect to P2P network
+[2025-09-23T05:59:54.041Z] [bootstrap-P1] [DEBUG] Making GET request to http://localhost:9000/health | {"data":null,"headers":{}}
+[2025-09-23T05:59:54.060Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"status":"ok","message":"Directory server is healthy","timestamp":"2025-09-23T05:59:54.056Z"}}
+[2025-09-23T05:59:54.061Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T05:59:54.062Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peer":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T05:59:54.061Z"},"headers":{}}
+[2025-09-23T05:59:54.062Z] [bootstrap-P1] [INFO] Registering with directory server | {"peerId":"P1","fileCount":1}
+[2025-09-23T05:59:54.080Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T05:59:54.080Z] [bootstrap-P1] [INFO] Starting periodic registration updates | {"interval":30000}
+[2025-09-23T05:59:54.080Z] [bootstrap-P1] [INFO] Successfully connected to P2P network | {"peerId":"P1","directoryServer":"http://localhost:9000"}
+[2025-09-23T05:59:54.080Z] [bootstrap-P1] [INFO] Successfully registered with directory server
+[2025-09-23T06:00:24.104Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:00:24.104Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:00:24.104Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:00:24.104Z"},"headers":{}}
+[2025-09-23T06:00:24.114Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:00:24.114Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:00:54.103Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:00:54.104Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:00:54.104Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:00:54.103Z"},"headers":{}}
+[2025-09-23T06:00:54.111Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:00:54.111Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:01:24.110Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:01:24.110Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:01:24.110Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:01:24.110Z"},"headers":{}}
+[2025-09-23T06:01:24.116Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:01:24.116Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:01:54.126Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:01:54.127Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:01:54.127Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:01:54.127Z"},"headers":{}}
+[2025-09-23T06:01:54.135Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:01:54.135Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:02:24.135Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:02:24.135Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:02:24.135Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:02:24.135Z"},"headers":{}}
+[2025-09-23T06:02:24.143Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:02:24.143Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:02:54.144Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:02:54.145Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:02:54.144Z"},"headers":{}}
+[2025-09-23T06:02:54.145Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:02:54.167Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:02:54.168Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:03:24.149Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:03:24.150Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:03:24.151Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:03:24.150Z"},"headers":{}}
+[2025-09-23T06:03:24.168Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:03:24.168Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:03:54.163Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:03:54.164Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:03:54.164Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:03:54.164Z"},"headers":{}}
+[2025-09-23T06:03:54.188Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:03:54.189Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:04:24.172Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:04:24.173Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:04:24.172Z"},"headers":{}}
+[2025-09-23T06:04:24.173Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:04:24.196Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:04:24.196Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:04:54.178Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:04:54.179Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:04:54.179Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:04:54.178Z"},"headers":{}}
+[2025-09-23T06:04:54.204Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:04:54.205Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:05:24.191Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:05:24.191Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:05:24.192Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:05:24.191Z"},"headers":{}}
+[2025-09-23T06:05:24.215Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:05:24.215Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:05:54.205Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:05:54.206Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:05:54.206Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:05:54.206Z"},"headers":{}}
+[2025-09-23T06:05:54.225Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:05:54.226Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:06:24.214Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:06:24.215Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:06:24.215Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:06:24.214Z"},"headers":{}}
+[2025-09-23T06:06:24.236Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:06:24.236Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:06:54.222Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:06:54.222Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:06:54.223Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:06:54.222Z"},"headers":{}}
+[2025-09-23T06:06:54.239Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:06:54.239Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:07:24.232Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:07:24.233Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:07:24.233Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:07:24.232Z"},"headers":{}}
+[2025-09-23T06:07:24.244Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:07:24.244Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:07:54.242Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:07:54.242Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:07:54.242Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:07:54.242Z"},"headers":{}}
+[2025-09-23T06:07:54.249Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:07:54.250Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:08:24.238Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:08:24.239Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:08:24.238Z"},"headers":{}}
+[2025-09-23T06:08:24.238Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:08:24.260Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:08:24.261Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:08:54.256Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:08:54.257Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:08:54.257Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:08:54.256Z"},"headers":{}}
+[2025-09-23T06:08:54.275Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:08:54.275Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:09:24.271Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:09:24.271Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:09:24.272Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:09:24.271Z"},"headers":{}}
+[2025-09-23T06:09:24.295Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:09:24.296Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:09:54.270Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:09:54.270Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:09:54.271Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:09:54.270Z"},"headers":{}}
+[2025-09-23T06:09:54.277Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:09:54.277Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:10:24.271Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:10:24.271Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:10:24.271Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:10:24.271Z"},"headers":{}}
+[2025-09-23T06:10:24.277Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:10:24.278Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:10:54.282Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:10:54.282Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:10:54.282Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:10:54.282Z"},"headers":{}}
+[2025-09-23T06:10:54.288Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:10:54.288Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:11:24.283Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:11:24.284Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:11:24.284Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:11:24.284Z"},"headers":{}}
+[2025-09-23T06:11:24.291Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:11:24.292Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:11:54.289Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:11:54.289Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:11:54.289Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:11:54.289Z"},"headers":{}}
+[2025-09-23T06:11:54.302Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:11:54.302Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:12:24.296Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:12:24.296Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:12:24.296Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:12:24.296Z"},"headers":{}}
+[2025-09-23T06:12:24.306Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:12:24.307Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:12:54.302Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:12:54.302Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:12:54.303Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:12:54.302Z"},"headers":{}}
+[2025-09-23T06:12:54.310Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:12:54.310Z] [bootstrap-P1] [INFO] Registration updated successfully
+[2025-09-23T06:13:24.306Z] [bootstrap-P1] [DEBUG] Current files retrieved | {"fileCount":1,"files":["sample1.txt"]}
+[2025-09-23T06:13:24.306Z] [bootstrap-P1] [INFO] Updating registration | {"peerId":"P1","fileCount":1}
+[2025-09-23T06:13:24.307Z] [bootstrap-P1] [DEBUG] Making POST request to http://localhost:9000/register | {"data":{"peerId":"P1","ip":"0.0.0.0","restPort":9001,"grpcPort":9002,"files":["sample1.txt"],"friendPrimary":"http://localhost:9003","friendBackup":"http://localhost:9005","status":"online","lastSeen":"2025-09-23T06:13:24.306Z"},"headers":{}}
+[2025-09-23T06:13:24.312Z] [bootstrap-P1] [DEBUG] Request successful | {"status":200,"data":{"success":true,"message":"Peer registered successfully"}}
+[2025-09-23T06:13:24.312Z] [bootstrap-P1] [INFO] Registration updated successfully

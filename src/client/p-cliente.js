@@ -1,6 +1,8 @@
-const ConfigLoader = require('../utils/config-loader');
+const configLoader = require('../utils/config-loader');
 const Logger = require('../utils/logger');
 const NetworkUtils = require('../utils/network');
+
+// configLoader is already the singleton instance
 
 class P2PClient {
     constructor() {
@@ -16,8 +18,7 @@ class P2PClient {
      */
     async initialize(configPath) {
         try {
-            // Load configuration
-            const configLoader = new ConfigLoader();
+            // Load configuration from singleton instance
             this.config = await configLoader.loadConfig(configPath);
             
             // Initialize logger

@@ -24,7 +24,7 @@ class FileQueryService {
     async initialize() {
         try {
             // Load configuration
-            const configLoader = new ConfigLoader();
+            const configLoader = require('../../utils/config-loader');
             this.config = await configLoader.loadConfig('./config/peer1.json'); // Default to peer1
             
             // Initialize logger

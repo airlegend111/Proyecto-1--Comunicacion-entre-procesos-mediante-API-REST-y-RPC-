@@ -4,7 +4,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const path = require('path');
 
-const ConfigLoader = require('../utils/config-loader');
+const configLoader = require('../utils/config-loader');
 const Logger = require('../utils/logger');
 const BootstrapService = require('../microservices/peer-discovery/bootstrap');
 const HealthCheckService = require('../microservices/peer-discovery/health-check');
@@ -27,7 +27,6 @@ class P2PServer {
     async initialize(configPath) {
         try {
             // Load configuration
-            const configLoader = new ConfigLoader();
             this.config = await configLoader.loadConfig(configPath);
             
             // Initialize logger

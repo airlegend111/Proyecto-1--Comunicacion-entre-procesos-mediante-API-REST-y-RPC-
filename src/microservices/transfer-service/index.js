@@ -31,7 +31,7 @@ class TransferService {
     async initialize() {
         try {
             // Load configuration
-            const configLoader = new ConfigLoader();
+            const configLoader = require('../../utils/config-loader');
             const configPath = process.argv[2] || './config/peer1.json';
             this.config = await configLoader.loadConfig(configPath);
             
