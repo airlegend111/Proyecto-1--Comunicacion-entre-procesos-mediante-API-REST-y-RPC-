@@ -8,3 +8,7 @@
 [2025-09-24T03:11:39.905Z] [transfer-service-P2] [INFO] Trying remote peer for file | {"peer":"http://localhost:9005"}
 [2025-09-24T03:11:39.919Z] [transfer-service-P2] [INFO] Downloaded file from remote peer | {"peer":"http://localhost:9005","filename":"sample3.txt"}
 [2025-09-24T03:11:39.919Z] [transfer-service-P2] [ERROR] File download failed | {"filename":"sample3.txt","error":"File sample3.txt not found in any peer"}
+[2025-09-24T03:48:35.523Z] [transfer-service-P2] [INFO] Starting file download | {"filename":"sample3.txt"}
+[2025-09-24T03:48:35.525Z] [transfer-service-P2] [INFO] Trying remote peer for file | {"peer":"http://localhost:9005"}
+[2025-09-24T03:48:35.536Z] [transfer-service-P2] [INFO] Downloaded file from remote peer | {"peer":"http://localhost:9005","filename":"sample3.txt"}
+[2025-09-24T03:48:35.537Z] [transfer-service-P2] [ERROR] File download failed | {"filename":"sample3.txt","error":"File sample3.txt not found in any peer"}

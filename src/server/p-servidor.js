@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const path = require('path');
 const fs = require('fs');
+const multer = require('multer');
 const grpc = require('@grpc/grpc-js');
 const protoLoader = require('@grpc/proto-loader');
 const rateLimit = require('express-rate-limit');
@@ -231,45 +232,80 @@ class P2PServer {
         const swaggerSpec = getSwaggerSpec({ port: this.config.restPort, peerName: this.config.peerId });
         this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-        // Endpoint de upload
-        this.app.post('/upload', async (req, res) => {
+        // Configuración de multer para subir archivos directo al directorio compartido del peer
+        const resolvedSharedDir = path.resolve(this.config.sharedDirectory);
+        try {
+            fs.mkdirSync(resolvedSharedDir, { recursive: true });
+        } catch (err) {
+            this.logger.error('No se pudo crear el directorio compartido', { error: err.message, resolvedSharedDir });
+        }
+        const storage = multer.diskStorage({
+            destination: (req, file, cb) => {
+                cb(null, resolvedSharedDir);
+            },
+            filename: (req, file, cb) => {
+                const safeFilename = path.basename(file.originalname).replace(/[^a-zA-Z0-9.-]/g, '_');
+                cb(null, safeFilename);
+            }
+        });
+        const upload = multer({
+            storage,
+            limits: { fileSize: 100 * 1024 * 1024, files: 10 },
+            fileFilter: (req, file, cb) => {
+                const ext = path.extname(file.originalname).toLowerCase();
+                const allowedExts = ['.txt', '.js', '.json', '.md', '.log', '.csv', '.xml', '.html', '.css'];
+                if (allowedExts.includes(ext)) return cb(null, true);
+                cb(new Error('File type not allowed'));
+            }
+        });
+
+        // Endpoint de upload (acepta multipart/form-data y JSON como fallback)
+        this.app.post('/upload', upload.single('file'), async (req, res) => {
             try {
-                const { filename, content, mimeType, overwrite = false } = req.body;
-                if (!filename || !content) {
-                    return res.status(400).json({ success: false, message: 'filename y content son requeridos' });
+                // Caso 1: multipart/form-data con campo 'file' (preferido)
+                if (req.file) {
+                    const stats = await fs.promises.stat(req.file.path);
+                    return res.status(201).json({
+                        success: true,
+                        filename: req.file.filename,
+                        path: req.file.path,
+                        size: stats.size,
+                        mimeType: req.file.mimetype,
+                        uploadedAt: new Date().toISOString(),
+                        message: 'File uploaded successfully'
+                    });
                 }
-                
-                // Upload directo sin usar el servicio
-                const filePath = path.join(this.config.sharedDirectory, filename);
-                const fileDir = path.dirname(filePath);
-                
-                // Crear directorio si no existe
-                await fs.promises.mkdir(fileDir, { recursive: true });
-                
+
+                // Caso 2: JSON: { filename, content, mimeType, overwrite }
+                const { filename, content, mimeType, overwrite = false } = req.body;
+                if (!filename || typeof content === 'undefined') {
+                    return res.status(400).json({ success: false, message: 'Se requiere archivo (multipart) o filename y content (JSON)' });
+                }
+
+                const targetPath = path.join(resolvedSharedDir, path.basename(filename));
+
                 // Verificar si el archivo existe
                 try {
-                    await fs.promises.access(filePath);
+                    await fs.promises.access(targetPath);
                     if (!overwrite) {
-                        return res.status(400).json({ 
-                            success: false, 
-                            message: `File ${filename} already exists. Use overwrite option to replace.` 
+                        return res.status(400).json({
+                            success: false,
+                            message: `File ${filename} already exists. Use overwrite option to replace.`
                         });
                     }
                 } catch (error) {
                     // Archivo no existe, continuar
                 }
-                
+
                 // Escribir archivo
                 const buffer = Buffer.isBuffer(content) ? content : Buffer.from(content, 'utf8');
-                await fs.promises.writeFile(filePath, buffer);
-                
-                // Obtener estadísticas del archivo
-                const stats = await fs.promises.stat(filePath);
-                
+                await fs.promises.writeFile(targetPath, buffer);
+
+                const stats = await fs.promises.stat(targetPath);
                 res.status(201).json({
                     success: true,
-                    filename,
-                    path: filePath,
+                    filename: path.basename(filename),
+                    path: targetPath,
                     size: stats.size,
                     mimeType,
                     uploadedAt: new Date().toISOString(),
