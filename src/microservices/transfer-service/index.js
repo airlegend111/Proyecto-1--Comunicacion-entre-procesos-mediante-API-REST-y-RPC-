@@ -73,10 +73,26 @@ class TransferService {
      * Setup multer for file uploads
      */
     setupMulter() {
-        // Asegurarse de que el directorio compartido exista
+        // Verificar que el directorio compartido exista y tenga permisos adecuados
         const sharedDir = path.resolve(this.config.sharedDirectory);
+        
+        // Crear el directorio si no existe
         if (!fs.existsSync(sharedDir)) {
-            fs.mkdirSync(sharedDir, { recursive: true });
+            try {
+                fs.mkdirSync(sharedDir, { recursive: true, mode: 0o755 });
+            } catch (error) {
+                throw new Error(`Failed to create shared directory: ${error.message}`);
+            }
+        }
+        
+        // Verificar permisos de lectura/escritura
+        try {
+            // Intentar escribir un archivo temporal
+            const testFile = path.join(sharedDir, '.write-test');
+            fs.writeFileSync(testFile, 'test');
+            fs.unlinkSync(testFile);
+        } catch (error) {
+            throw new Error(`Shared directory "${sharedDir}" is not writable: ${error.message}`);
         }
 
         const storage = multer.diskStorage({
@@ -84,11 +100,29 @@ class TransferService {
                 cb(null, sharedDir);
             },
             filename: (req, file, cb) => {
-                // Asegurarse de que el nombre del archivo sea seguro
-                const safeFilename = path.basename(file.originalname).replace(/[^a-zA-Z0-9.-]/g, '_');
-                cb(null, safeFilename);
+                const crypto = require('crypto');
+                const originalName = path.basename(file.originalname);
+                const safeFilename = originalName.replace(/[^a-zA-Z0-9.-]/g, '_');
+                
+                // Generar un hash único basado en el nombre y timestamp
+                const timestamp = Date.now();
+                const hash = crypto
+                    .createHash('sha256')
+                    .update(`${originalName}-${timestamp}`)
+                    .digest('hex')
+                    .substring(0, 8);
+                
+                // Combinar el hash con el nombre seguro
+                const ext = path.extname(safeFilename);
+                const nameWithoutExt = path.basename(safeFilename, ext);
+                const finalName = `${nameWithoutExt}-${hash}${ext}`;
+                
+                cb(null, finalName);
             }
         });
+        
+        // Verificar espacio disponible antes de aceptar el archivo
+        const checkDiskSpace = require('check-disk-space').default;
         
         this.upload = multer({
             storage: storage,
@@ -96,14 +130,28 @@ class TransferService {
                 fileSize: 100 * 1024 * 1024, // 100MB
                 files: 10 // Maximum 10 files per request
             },
-            fileFilter: (req, file, cb) => {
-                const ext = path.extname(file.originalname).toLowerCase();
-                const allowedExts = ['.txt', '.js', '.json', '.md', '.log', '.csv', '.xml', '.html', '.css'];
-                
-                if (allowedExts.includes(ext)) {
+            fileFilter: async (req, file, cb) => {
+                try {
+                    // Verificar extensión del archivo
+                    const ext = path.extname(file.originalname).toLowerCase();
+                    const allowedExts = ['.txt', '.js', '.json', '.md', '.log', '.csv', '.xml', '.html', '.css'];
+                    
+                    if (!allowedExts.includes(ext)) {
+                        return cb(new Error('File type not allowed'));
+                    }
+
+                    // Verificar espacio disponible
+                    const space = await checkDiskSpace(sharedDir);
+                    const minSpaceRequired = 500 * 1024 * 1024; // 500MB mínimo requerido
+                    
+                    if (space.free < minSpaceRequired) {
+                        return cb(new Error(`Insufficient disk space. At least ${minSpaceRequired / (1024 * 1024)}MB required`));
+                    }
+                    
+                    // Archivo aceptado
                     cb(null, true);
-                } else {
-                    cb(new Error('File type not allowed'));
+                } catch (error) {
+                    cb(error);
                 }
             }
         });
@@ -547,19 +595,55 @@ class TransferService {
             next(error);
         });
 
-        // General error handling
+        // Error handling detallado
         this.app.use((error, req, res, next) => {
-            this.logger.error('Unhandled error', {
-                error: error.message,
+            // Extraer información relevante del error
+            const errorInfo = {
+                message: error.message,
+                type: error.name,
+                path: req.path,
+                method: req.method,
+                timestamp: new Date().toISOString()
+            };
+
+            // Personalizar respuesta según el tipo de error
+            let statusCode = 500;
+            let errorResponse = {
+                success: false,
+                error: errorInfo
+            };
+
+            if (error instanceof multer.MulterError) {
+                statusCode = 400;
+                errorResponse.code = 'UPLOAD_ERROR';
+                errorResponse.details = {
+                    field: error.field,
+                    code: error.code
+                };
+            } else if (error.code === 'ENOENT') {
+                statusCode = 404;
+                errorResponse.code = 'FILE_NOT_FOUND';
+            } else if (error.code === 'EACCES') {
+                statusCode = 403;
+                errorResponse.code = 'ACCESS_DENIED';
+            } else if (error.code === 'ENOSPC') {
+                statusCode = 507;
+                errorResponse.code = 'INSUFFICIENT_STORAGE';
+            }
+
+            // Loguear el error con detalles adicionales
+            this.logger.error('Error in transfer service', {
+                ...errorInfo,
+                statusCode,
                 stack: error.stack,
-                url: req.url,
-                method: req.method
+                headers: req.headers,
+                query: req.query,
+                params: req.params,
+                body: req.body
             });
 
-            res.status(500).json({
-                success: false,
-                message: 'Internal server error'
-            });
+            // Enviar respuesta
+            res.status(statusCode).json(errorResponse);
         });
     }
 
