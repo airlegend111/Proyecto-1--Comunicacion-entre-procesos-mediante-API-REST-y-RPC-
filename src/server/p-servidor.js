@@ -125,6 +125,69 @@ class P2PServer {
             });
         });
 
+        // --- INTEGRACIÓN TRANSFER SERVICE ---
+        const swaggerUi = require('swagger-ui-express');
+        const getSwaggerSpec = require('../microservices/transfer-service/swagger.config');
+        const UploadService = require('../microservices/transfer-service/upload.service');
+        const DownloadService = require('../microservices/transfer-service/download.service');
+        const Logger = require('../utils/logger');
+        const path = require('path');
+        const fs = require('fs');
+
+        // Instanciar servicios con la configuración del peer
+        const transferLogger = new Logger(`transfer-service-${this.config.peerId}`);
+        const uploadService = new UploadService(transferLogger, this.config.sharedDirectory);
+        const downloadService = new DownloadService(transferLogger, this.config.sharedDirectory);
+
+        // Swagger UI para cada peer
+        const swaggerSpec = getSwaggerSpec({ port: this.config.restPort, peerName: this.config.peerId });
+        this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+        // Endpoint de upload
+        this.app.post('/upload', async (req, res) => {
+            try {
+                const { filename, content, mimeType, overwrite = false } = req.body;
+                if (!filename || !content) {
+                    return res.status(400).json({ success: false, message: 'filename y content son requeridos' });
+                }
+                const fileData = { filename, content, mimeType };
+                const result = await uploadService.uploadFile(fileData, { overwrite });
+                const statusCode = result.success ? 201 : 400;
+                res.status(statusCode).json(result);
+            } catch (error) {
+                transferLogger.error('Upload error', { error: error.message });
+                res.status(500).json({ success: false, message: 'Upload failed' });
+            }
+        });
+
+        // Endpoint de download
+        this.app.get('/download/:filename', async (req, res) => {
+            try {
+                const { filename } = req.params;
+                const result = await downloadService.downloadFile(filename);
+                if (result.success) {
+                    const filePath = path.join(this.config.sharedDirectory, filename);
+                    try {
+                        await fs.promises.access(filePath);
+                        res.set({
+                            'Content-Type': 'application/octet-stream',
+                            'Content-Disposition': `attachment; filename="${filename}"`,
+                            'Content-Length': result.size.toString()
+                        });
+                        const fileStream = fs.createReadStream(filePath);
+                        fileStream.pipe(res);
+                    } catch (error) {
+                        res.status(404).json({ success: false, message: `File ${filename} not found`, error: error.message });
+                    }
+                } else {
+                    res.status(404).json(result);
+                }
+            } catch (error) {
+                transferLogger.error('Download error', { error: error.message });
+                res.status(500).json({ success: false, message: 'Download failed' });
+            }
+        });
+
         // Connect to network
         this.app.post('/connect', async (req, res) => {
             try {
