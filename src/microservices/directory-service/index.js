@@ -45,7 +45,10 @@ if (require.main === module) {
                         }
                         // Registrar el peer en el servidor maestro
                         if (peerId && grpcPort && files.length > 0) {
-                            const body = JSON.stringify({ peer: peerId, files, grpc_port: grpcPort });
+                            // Obtener el puerto REST del peer
+                            const restPort = peerData.restPort || peerData.rest_port;
+                            const restUrl = restPort ? `http://localhost:${restPort}` : undefined;
+                            const body = JSON.stringify({ peer: peerId, files, grpc_port: grpcPort, rest_url: restUrl });
                             const http = require('http');
                             const req = http.request({
                                 hostname: 'localhost',

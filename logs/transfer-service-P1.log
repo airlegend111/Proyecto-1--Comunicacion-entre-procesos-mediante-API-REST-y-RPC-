@@ -1,0 +1,138 @@
+[2025-09-24T00:24:38.865Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T00:24:38.866Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found"}
+[2025-09-24T00:59:35.123Z] [transfer-service-P1] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T00:59:35.124Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T00:59:35.126Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T01:00:03.630Z] [transfer-service-P1] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T01:00:03.631Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T01:00:03.630Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T01:00:10.043Z] [transfer-service-P1] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T01:00:10.046Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T01:00:10.044Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T01:09:54.122Z] [transfer-service-P1] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T01:09:54.123Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T01:09:54.122Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T01:15:22.438Z] [transfer-service-P1] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T01:15:22.439Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T01:15:22.440Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T01:15:31.253Z] [transfer-service-P1] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T01:15:31.254Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T01:15:31.256Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T02:11:15.154Z] [transfer-service-P1] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T02:11:15.155Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T02:11:15.159Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T02:23:00.698Z] [transfer-service-P1] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T02:23:00.698Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T02:23:00.701Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T02:25:44.179Z] [transfer-service-P1] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T02:25:44.180Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T02:25:44.182Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T02:30:54.872Z] [transfer-service-P1] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T02:30:54.873Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T02:30:54.875Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T02:37:12.565Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T02:37:12.567Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T02:56:47.326Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T02:56:47.328Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T03:03:14.903Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.904Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.911Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.912Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.918Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.919Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.925Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.926Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.930Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.931Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.936Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.937Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.941Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.943Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.948Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.949Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.955Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.955Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.961Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.962Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.966Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.967Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.972Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.973Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.977Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.978Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.983Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.982Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.987Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.988Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.992Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.993Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:14.998Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:14.999Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:15.003Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:15.004Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:15.007Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:15.008Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:15.012Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample1.txt"}
+[2025-09-24T03:03:15.013Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9001"}
+[2025-09-24T03:03:15.017Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 429"}
+[2025-09-24T03:03:15.017Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.019Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.019Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.021Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.021Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.023Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.023Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.026Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.026Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.028Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.028Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.030Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.030Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.032Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.032Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.034Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.034Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.036Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.036Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.037Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.038Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.039Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.039Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.041Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.041Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.043Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.043Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.046Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.046Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.047Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.048Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.049Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.050Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.052Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.053Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.055Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.055Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:03:15.057Z] [transfer-service-P1] [ERROR] Remote peer does not have file | {"peer":"http://localhost:9001","error":"Request failed with status code 404"}
+[2025-09-24T03:03:15.057Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample1.txt","error":"File sample1.txt not found in any peer"}
+[2025-09-24T03:04:24.074Z] [transfer-service-P1] [INFO] Starting file upload | {"filename":"test_upload.txt","mimeType":"text/plain","contentSize":23}
+[2025-09-24T03:04:24.074Z] [transfer-service-P1] [ERROR] File upload failed | {"filename":"test_upload.txt","error":"The \"cb\" argument must be of type function. Received undefined"}
+[2025-09-24T03:05:09.321Z] [transfer-service-P1] [INFO] Starting file upload | {"filename":"test_upload.txt","mimeType":"text/plain","contentSize":23}
+[2025-09-24T03:05:09.322Z] [transfer-service-P1] [ERROR] File upload failed | {"filename":"test_upload.txt","error":"The \"cb\" argument must be of type function. Received undefined"}
+[2025-09-24T03:05:40.870Z] [transfer-service-P1] [INFO] Starting file upload | {"filename":"test_upload.txt","mimeType":"text/plain","contentSize":23}
+[2025-09-24T03:05:40.871Z] [transfer-service-P1] [ERROR] File upload failed | {"filename":"test_upload.txt","error":"The \"cb\" argument must be of type function. Received undefined"}
+[2025-09-24T03:09:56.010Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T03:09:56.013Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9003"}
+[2025-09-24T03:09:56.031Z] [transfer-service-P1] [INFO] Downloaded file from remote peer | {"peer":"http://localhost:9003","filename":"sample2.txt"}
+[2025-09-24T03:09:56.032Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T03:10:45.863Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T03:10:45.863Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9003"}
+[2025-09-24T03:10:45.867Z] [transfer-service-P1] [INFO] Downloaded file from remote peer | {"peer":"http://localhost:9003","filename":"sample2.txt"}
+[2025-09-24T03:10:45.868Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T03:11:24.728Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample3.txt"}
+[2025-09-24T03:11:24.730Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9005"}
+[2025-09-24T03:11:24.742Z] [transfer-service-P1] [INFO] Downloaded file from remote peer | {"peer":"http://localhost:9005","filename":"sample3.txt"}
+[2025-09-24T03:11:24.743Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample3.txt","error":"File sample3.txt not found in any peer"}
+[2025-09-24T03:20:48.808Z] [transfer-service-P1] [INFO] Trying remote peer for file | {"peer":"http://localhost:9003"}
+[2025-09-24T03:20:48.807Z] [transfer-service-P1] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T03:20:48.820Z] [transfer-service-P1] [INFO] Downloaded file from remote peer | {"peer":"http://localhost:9003","filename":"sample2.txt"}
+[2025-09-24T03:20:48.821Z] [transfer-service-P1] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}

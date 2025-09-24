@@ -29,27 +29,58 @@ class DownloadService {
                 includeContent = true, 
                 includeMetadata = true, 
                 validateHash = false,
-                range = null 
+                range = null,
+                peers = [] // peers: [{ url: 'http://localhost:9001' }, ...]
             } = options;
 
             this.logger.info('Starting file download', { filename });
 
             // Validate filename
-            if (!filename || filename.trim() === '') {
-                throw new Error('Filename is required');
-            }
-
-            // Check for path traversal
-            if (filename.includes('..') || filename.includes('/') || filename.includes('\\')) {
-                throw new Error('Invalid filename: path traversal not allowed');
-            }
+                    // Validate filename
+                    if (!filename || filename.trim() === '') {
+                        throw new Error('Filename is required');
+                    }
+                    // Check for path traversal
+                    if (filename.includes('..') || filename.includes('/') || filename.includes('\\')) {
+                        throw new Error('Invalid filename: path traversal not allowed');
+                    }
 
             const filePath = path.join(this.sharedDirectory, filename);
 
-            // Check if file exists
+            // Check if file exists locally
             const fileExists = await this.fileExists(filePath);
             if (!fileExists) {
-                throw new Error(`File ${filename} not found`);
+                // Buscar en otros peers vía HTTP
+                const axios = require('axios');
+                let found = false;
+                for (const peer of peers) {
+                    if (!peer.restUrl || typeof peer.restUrl !== 'string' || !peer.restUrl.startsWith('http')) {
+                        this.logger.warn('Skipping peer with invalid restUrl', { peer });
+                        continue;
+                    }
+                    try {
+                        this.logger.info('Trying remote peer for file', { peer: peer.restUrl });
+                        const response = await axios.get(`${peer.restUrl}/download/${filename}`, {
+                            responseType: 'arraybuffer',
+                            validateStatus: status => status === 200
+                        });
+                        const contentType = response.headers['content-type'] || '';
+                        if (response.status === 200 && response.data && contentType.includes('application/octet-stream')) {
+                            await fsp.writeFile(filePath, Buffer.from(response.data));
+                            this.logger.info('Downloaded file from remote peer', { peer: peer.restUrl, filename });
+                            found = true;
+                            break;
+                        }
+                    } catch (err) {
+                        this.logger.error('Remote peer does not have file', { peer: peer.restUrl, error: err.message });
+                        continue;
+                    }
+                }
+                // Verificar de nuevo si el archivo existe localmente
+                const fileExistsFinal = await this.fileExists(filePath);
+                if (!fileExistsFinal) {
+                    throw new Error(`File ${filename} not found in any peer`);
+                }
             }
 
             // Get file stats

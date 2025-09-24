@@ -50,7 +50,7 @@ class UploadService {
             const fileDir = path.dirname(filePath);
 
             // Ensure directory exists
-            await fs.mkdir(fileDir, { recursive: true });
+            await fsp.mkdir(fileDir, { recursive: true });
 
             // Check if file exists
             const fileExists = await this.fileExists(filePath);
@@ -60,10 +60,10 @@ class UploadService {
 
             // Write file content
             const buffer = Buffer.isBuffer(content) ? content : Buffer.from(content, 'utf8');
-            await fs.writeFile(filePath, buffer);
+            await fsp.writeFile(filePath, buffer);
 
             // Generate file metadata
-            const stats = await fs.stat(filePath);
+            const stats = await fsp.stat(filePath);
             const fileHash = await this.calculateFileHash(filePath);
 
             const result = {
@@ -206,7 +206,7 @@ class UploadService {
      */
     async fileExists(filePath) {
         try {
-            await fs.access(filePath);
+            await fsp.access(filePath);
             return true;
         } catch (error) {
             return false;
@@ -220,7 +220,7 @@ class UploadService {
      */
     async calculateFileHash(filePath) {
         try {
-            const content = await fs.readFile(filePath);
+            const content = await fsp.readFile(filePath);
             return crypto.createHash('sha256').update(content).digest('hex');
         } catch (error) {
             this.logger.error('Failed to calculate file hash', { filePath, error: error.message });
@@ -238,7 +238,7 @@ class UploadService {
             const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
             const backupPath = `${filePath}.backup.${timestamp}`;
             
-            await fs.copyFile(filePath, backupPath);
+            await fsp.copyFile(filePath, backupPath);
             
             this.logger.info('File backup created', { 
                 original: filePath, 
@@ -290,18 +290,18 @@ class UploadService {
      */
     async cleanupOldBackups(maxAge = 24 * 60 * 60 * 1000) { // 24 hours default
         try {
-            const files = await fs.readdir(this.sharedDirectory);
+            const files = await fsp.readdir(this.sharedDirectory);
             const backupFiles = files.filter(file => file.includes('.backup.'));
             const now = Date.now();
             let cleanedCount = 0;
 
             for (const file of backupFiles) {
                 const filePath = path.join(this.sharedDirectory, file);
-                const stats = await fs.stat(filePath);
+                const stats = await fsp.stat(filePath);
                 const age = now - stats.mtime.getTime();
 
                 if (age > maxAge) {
-                    await fs.unlink(filePath);
+                    await fsp.unlink(filePath);
                     cleanedCount++;
                 }
             }

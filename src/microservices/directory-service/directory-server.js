@@ -121,11 +121,28 @@ class DirectoryServer {
          *         description: Peer registrado exitosamente
          */
         this.app.post('/register', (req, res) => {
-            const { peer, files, grpc_port } = req.body;
-            
+            const { peer, files, grpc_port, rest_url } = req.body;
+            // Validación: peer debe estar definido y ser string, files debe ser array y no vacío
+            if (!peer || typeof peer !== 'string' || !files || !Array.isArray(files) || files.length === 0) {
+                this.logger.error('Registro de peer inválido', { peer, files });
+                return res.status(400).json({ success: false, message: 'Registro inválido: peer y files son requeridos y válidos.' });
+            }
+            // Si el peer no envía rest_url, asignar un valor por defecto seguro
+            let restUrl = rest_url;
+            if (!restUrl) {
+                // Si peer es tipo 'P1', 'P2', etc. y no hay rest_url, asignar puerto por defecto
+                if (typeof peer === 'string' && peer.startsWith('P')) {
+                    const peerNumber = peer.substring(1);
+                    const defaultPort = 9000 + Number(peerNumber) * 2 - 1;
+                    restUrl = `http://localhost:${defaultPort}`;
+                } else {
+                    restUrl = `http://localhost:9001`;
+                }
+            }
+
             // Registrar el peer en el registro general
             this.peersRegistry[peer] = {
-                rest: peer,
+                rest: restUrl,
                 grpc_port,
                 files,
                 lastSeen: new Date().toISOString()
@@ -137,13 +154,13 @@ class DirectoryServer {
                     this.directorio[file] = [];
                 }
                 // Evitar duplicados
-                const existingPeer = this.directorio[file].find(p => p.rest === peer);
+                const existingPeer = this.directorio[file].find(p => p.rest === restUrl);
                 if (!existingPeer) {
-                    this.directorio[file].push({ rest: peer, grpc_port });
+                    this.directorio[file].push({ rest: restUrl, grpc_port });
                 }
             });
 
-            this.logger.info('Peer registered successfully', { peer, fileCount: files.length });
+            this.logger.info('Peer registered successfully', { peer, restUrl, fileCount: files.length });
             res.json({ success: true, message: 'Peer registered successfully' });
         });
 

@@ -1,0 +1,4 @@
+[2025-09-24T03:12:10.947Z] [transfer-service-P3] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T03:12:10.949Z] [transfer-service-P3] [INFO] Trying remote peer for file | {"peer":"http://localhost:9003"}
+[2025-09-24T03:12:10.963Z] [transfer-service-P3] [INFO] Downloaded file from remote peer | {"peer":"http://localhost:9003","filename":"sample2.txt"}
+[2025-09-24T03:12:10.964Z] [transfer-service-P3] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}

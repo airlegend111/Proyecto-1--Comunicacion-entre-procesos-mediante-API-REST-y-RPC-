@@ -1,0 +1,10 @@
+[2025-09-24T01:01:15.725Z] [transfer-service-P2] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T01:01:15.725Z] [transfer-service-P2] [INFO] Starting file download | {"filename":"sample2.txt"}
+[2025-09-24T01:01:15.728Z] [transfer-service-P2] [ERROR] File download failed | {"filename":"sample2.txt","error":"File sample2.txt not found in any peer"}
+[2025-09-24T02:31:11.887Z] [transfer-service-P2] [ERROR] Error fetching peers from directory server | {"error":"Cannot read properties of undefined (reading 'startsWith')"}
+[2025-09-24T02:31:11.888Z] [transfer-service-P2] [INFO] Starting file download | {"filename":"sample3.txt"}
+[2025-09-24T02:31:11.889Z] [transfer-service-P2] [ERROR] File download failed | {"filename":"sample3.txt","error":"File sample3.txt not found in any peer"}
+[2025-09-24T03:11:39.902Z] [transfer-service-P2] [INFO] Starting file download | {"filename":"sample3.txt"}
+[2025-09-24T03:11:39.905Z] [transfer-service-P2] [INFO] Trying remote peer for file | {"peer":"http://localhost:9005"}
+[2025-09-24T03:11:39.919Z] [transfer-service-P2] [INFO] Downloaded file from remote peer | {"peer":"http://localhost:9005","filename":"sample3.txt"}
+[2025-09-24T03:11:39.919Z] [transfer-service-P2] [ERROR] File download failed | {"filename":"sample3.txt","error":"File sample3.txt not found in any peer"}

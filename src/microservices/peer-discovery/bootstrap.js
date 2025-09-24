@@ -107,14 +107,9 @@ class BootstrapService {
             
             const peerData = {
                 peer: this.config.peerId,
-                ip: this.config.ip,
-                restPort: this.config.restPort,
-                grpcPort: this.config.grpcPort,
                 files: files,
-                friendPrimary: this.config.friendPrimary,
-                friendBackup: this.config.friendBackup,
-                status: 'online',
-                lastSeen: new Date().toISOString()
+                grpc_port: this.config.grpcPort,
+                rest_url: `http://localhost:${this.config.restPort}`
             };
 
             this.logger.info('Registering with directory server', {
@@ -247,15 +242,10 @@ class BootstrapService {
             const files = await this.getCurrentFiles();
             
             const peerData = {
-                peerId: this.config.peerId,
-                ip: this.config.ip,
-                restPort: this.config.restPort,
-                grpcPort: this.config.grpcPort,
+                peer: this.config.peerId,
                 files: files,
-                friendPrimary: this.config.friendPrimary,
-                friendBackup: this.config.friendBackup,
-                status: 'online',
-                lastSeen: new Date().toISOString()
+                grpc_port: this.config.grpcPort,
+                rest_url: `http://localhost:${this.config.restPort}`
             };
 
             this.logger.info('Updating registration', {
